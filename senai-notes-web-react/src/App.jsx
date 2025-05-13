@@ -1,13 +1,15 @@
-import './App.css'
-import NewUser from './pages/new-user'
+import Login from "./pages/login"
 
 function App() {
+return (
 
-  return (
-    <>
-     <NewUser></NewUser>
-    </>
-  )
+  <>
+
+    <Login/>
+
+  </>
+)
+
 }
 
 export default App
