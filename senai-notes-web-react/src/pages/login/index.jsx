@@ -1,5 +1,6 @@
 import "./login.css"
 import logo from "../../assets/imgs/logo.svg"
+import bar from "../../assets/imgs/Divider.svg"
 
 function Login() {
 
@@ -13,6 +14,7 @@ function Login() {
                 <main className="page-container">
 
                     <div className="login-container">
+                        <div className="borda-interna">
                         <img className="logo" src={logo} alt=""></img>
 
                             <h1
@@ -25,8 +27,14 @@ function Login() {
 
                             <p className="textPassword">Password</p>
                             <input className="inpt"  placeholder="password" />
-
+                            
                             <button className="btm" >Login </button>
+
+                            <img className="barra" src={bar} alt=""></img>
+
+                            <a className="form-hint" href="/new-user"> No account yet? Sign Up </a>
+
+                            </div>
 
 
                         
