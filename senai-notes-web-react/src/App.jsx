@@ -1,13 +1,15 @@
-import Notes from "./pages/senai-notes"
-
+import Login from "./pages/login"
 
 function App() {
+return (
 
-  return (
-    <>
-  <Notes></Notes>
-    </>
-  )
+  <>
+
+    <Login/>
+
+  </>
+)
+
 }
 
 export default App
