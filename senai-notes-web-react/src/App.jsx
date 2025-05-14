@@ -1,11 +1,12 @@
 import Login from "./pages/login"
+import Notes from "./pages/senai-notes"
 
 function App() {
 return (
 
   <>
 
-    <Login/>
+    <Notes/>
 
   </>
 )
