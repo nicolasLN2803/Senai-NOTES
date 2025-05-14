@@ -4,8 +4,11 @@
 .page-container {
 
     display: flex;
+<<<<<<< HEAD
     background-color: colors/neutral/100;
    
+=======
+>>>>>>> 7e1a854421f7b184fc906d33ba37fdbf8a8db461
 
 
 }
@@ -18,7 +21,10 @@
     font-weight: normal;
     margin-bottom: 16px;
     font-weight: bold;
+<<<<<<< HEAD
     
+=======
+>>>>>>> 7e1a854421f7b184fc906d33ba37fdbf8a8db461
 
 
 }
@@ -32,6 +38,7 @@
     border-radius: 10px;
     border: none;
     /* Define a cor do fundo e os espaçamento interno */
+<<<<<<< HEAD
 
     
 }
@@ -41,12 +48,18 @@
 .btm {
 
     border: none;
+=======
+}
+
+.btm {
+>>>>>>> 7e1a854421f7b184fc906d33ba37fdbf8a8db461
     padding: 10px;
     border-radius: 10px;
     background-color: #335CFF;
     color: #f7f9fb;
     width: 377px;
 
+<<<<<<< HEAD
     cursor: pointer;
     transition: all ease 0.5s;
 
@@ -56,6 +69,8 @@ button:hover {
 
     transform: scale(1.2);
 
+=======
+>>>>>>> 7e1a854421f7b184fc906d33ba37fdbf8a8db461
 }
 
 .login-container {
@@ -72,6 +87,7 @@ button:hover {
 .logo {
 
     height: 38px;
+<<<<<<< HEAD
     margin-top: 40px;
     
 
@@ -161,3 +177,8 @@ margin-top: 50px;
 
 
 }
+=======
+
+}
+
+>>>>>>> 7e1a854421f7b184fc906d33ba37fdbf8a8db461

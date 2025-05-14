@@ -2,20 +2,14 @@
   "users": [
     {
       "id": "1",
-      "name": "Nicolas",
-      "email": "bolinhas@email.com",
+      "name": "Kaue",
+      "email": "kaue@gmail.com",
       "password": "12345678"
     },
     {
-      "id": "d687"
-    },
-    {
-      "id": "13ac"
-    },
-    {
-      "id": "183b",
-      "name": "teste",
-      "email": "testeemail@gmail.com",
+      "id": "62b4",
+      "name": "Teste",
+      "email": "Teste@gmail.com",
       "password": "12345678"
     }
   ]

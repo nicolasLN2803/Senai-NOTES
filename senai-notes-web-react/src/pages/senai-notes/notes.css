@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+.botoes {
+
+    width: 250px;
+    margin-top: 20px;
+    border: none;
+    background-color: white;
+    font-family: inter;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
+.tela-principal {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.caixa-esquerda {
+    width: 20vw;
+    height: 100vh;
+    /* background-color: blue; */
+    padding-top: 1vw;
+    padding-left: 1vw;
+}
+
+.caixa-direita {
+    width: 80vw;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.linha {
+    width: 240px;
+    height: 1px;
+    background-color: black;
+    size:1px;
+    margin-top: 10px;
+    
+}
+
+.direita-cabecalho {
+justify-content: center;
+display: flex;
+
+}
+
+
+
+
+
+
+
