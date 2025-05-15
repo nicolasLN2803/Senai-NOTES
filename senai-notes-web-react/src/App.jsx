@@ -1,10 +1,7 @@
 import Login from "./pages/login"
-<<<<<<< HEAD
 import NewUser from "./pages/new-user"
 import {BrowserRouter, Route, Routes } from "react-router-dom";
-=======
 import Notes from "./pages/senai-notes"
->>>>>>> 7e1a854421f7b184fc906d33ba37fdbf8a8db461
 
 function App() {
 
@@ -29,7 +26,7 @@ return (
   <>
     <BrowserRouter>
 
-<<<<<<< HEAD
+
       <Routes>
 
         <Route path="/" element= {<Login/>}></Route>
@@ -43,9 +40,8 @@ return (
 
     </BrowserRouter>
     
-=======
-    <Notes/>
->>>>>>> 7e1a854421f7b184fc906d33ba37fdbf8a8db461
+
+   
 
   </>
 )

@@ -1,6 +1,5 @@
 import "./new-user.css"
 import logo from "../../assets/imgs/logo.svg"
-<<<<<<< HEAD
 import bar from "../../assets/imgs/Divider.svg"
 import { useState } from "react";
 
@@ -103,35 +102,6 @@ return (
                             <a className="form-hint" href="/login"> Already have an account? Login </a>
 
                             </div>
-=======
-
-function NewUser() {
-
-
-    
-        return (
-
-            <>
-                <header></header>
-
-                <main className="page-container">
-
-                    <div className="login-container">
-                        <img className="logo" src={logo} alt=""></img>
-
-                            <h1
-                                className="titulo"> Create Your Account </h1>
-
-                                <p className="subtitulo"> Please log in to continue</p>
-
-                            <p className="textEmail">Email Address</p>
-                            <input className="inpt"  placeholder="email@example.com" />
-
-                            <p className="textPassword">Password</p>
-                            <input className="inpt"  placeholder="password" />
-
-                            <button className="btm" >Login </button>
->>>>>>> 7e1a854421f7b184fc906d33ba37fdbf8a8db461
 
 
                         
@@ -141,11 +111,8 @@ function NewUser() {
 
 
             </>
-<<<<<<< HEAD
-=======
         )
     }
->>>>>>> 7e1a854421f7b184fc906d33ba37fdbf8a8db461
 
 
 

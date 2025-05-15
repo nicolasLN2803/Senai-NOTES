@@ -95,6 +95,7 @@ function Login() {
 
                             <p className="textPassword">Password</p>
                             <input className="inpt"  value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="password" />
+                            <a className="senhaEsquecida" href="/nova-senha"> Forgot </a>
                             
                             <button className="btm" onClick={onLoginCLick}>Login </button>
 
