@@ -1,9 +1,7 @@
 import "./notes.css";
-
 import SenaiNotes from "../../assets/imgs/Wrapper.svg"
 import AlNotes from "../../assets/imgs/AllNotes.svg"
 import Archived from "../../assets/imgs/ArchivedNotes.svg"
-
 import Cooking from "../../assets/imgs/Cooking.svg"
 import dev from "../../assets/imgs/Cooking.svg"
 import Fitness from "../../assets/imgs/Cooking.svg"
@@ -14,6 +12,17 @@ import Recipes from "../../assets/imgs/Cooking.svg"
 import Shooping from "../../assets/imgs/Cooking.svg"
 import Travel from "../../assets/imgs/Cooking.svg"
 import TaypeScrit from "../../assets/imgs/Cooking.svg"
+import Engrenage from "../../assets/imgs/Setting.svg"
+import Topba from "../../assets/imgs/Topbar Item.svg"
+import Search from "../../assets/imgs/Search.svg"
+import Rectangle from "../../assets/imgs/Rectangle 45.svg"
+import Rectangle3 from "../../assets/imgs/Rectangle3.svg"
+import FavoritePasta from "../../assets/imgs/FavoritePasta.svg"
+import Weekly from "../../assets/imgs/Weekly.svg"
+import Meal from "../../assets/imgs/Meal.svg"
+import Reading from "../../assets/imgs/Reading.svg"
+import FitnessDir from "../../assets/imgs/Fitness.svg"
+
 
 
 function Notes() {
@@ -33,7 +42,6 @@ function Notes() {
                     </div>
 
                     <div class="superior-esquerda">
-
                         <button class="botoes" type="button">
                             <img src={AlNotes} alt="" srcset="" />
                             Al Notes </button>
@@ -44,10 +52,7 @@ function Notes() {
                     </div>
 
 
-                    <div class="linha"></div>
-
-
-                    <div class="inferior-esquerda">
+                     <div class="inferior-esquerda">
 
                         <button class="botoes" type="button">
                             <img src={Cooking} alt="" srcset="" />
@@ -96,36 +101,107 @@ function Notes() {
 
                 <main>
 
-
                     <div class="caixa-direita">
 
-                        <div class="direita-cabecalho">
+                        <div class="create-notes" >
+                            <button class="create-new" type="button"> + Create New Notes</button>
+                        </div>
 
-                            <h1>All Notes</h1>
+                        <div class="direita-inferior">
 
-                            <input class="inpt" type="Search" placeholder="Search by tIthe,content or tags..."/>
-                            <img src={TaypeScrit} alt="" srcset="" />
-                            <img src={TaypeScrit} alt="" srcset="" />
-                            <img src={TaypeScrit} alt="" srcset="" />
+                            <div class="botao">
+                                <button class="botoes" type="button">
+                                    <img src={Rectangle} alt="" srcset="" />
+                                </button>
+                                <div>
+                                    <h1>React Performance Optimization</h1>
+                                </div>
+                            </div>
+
+                            <div class="botao">
+                                <button class="botoes" type="button">
+                                    <img src={Rectangle3} alt="" srcset="" />
+                                </button>
+                                <div>
+                                    <h1>Japan Travel Planning</h1>
+                                </div>
+                            </div>
+
+                            <div class="botao">
+                                <button class="botoes" type="button">
+                                    <img src={FavoritePasta} alt="" srcset="" />
+                                </button>
+                                <div>
+                                    <h1>Favorite Pasta Recipes</h1>
+                                </div>
+                            </div>
+
+                            <div class="botao">
+                                <button class="botoes" type="button">
+                                    <img src={Weekly} alt="" srcset="" />
+                                </button>
+                                <div>
+                                    <h1>Weekly Workout Plan</h1>
+                                </div>
+                            </div>
 
 
+                            <div class="botao">
+                                <button class="botoes" type="button">
+                                    <img src={Meal} alt="" srcset="" />
+                                </button>
+                                <div>
+                                    <h1>Meal Prep Ideas</h1>
+                                </div>
+                            </div>
+
+
+                            <div class="botao">
+                                <button class="botoes" type="button">
+                                    <img src={Reading} alt="" srcset="" />
+                                </button>
+                                <div>
+                                    <h1>Reading List</h1>
+                                </div>
+                            </div>
+
+
+
+                            <div class="botao">
+                                <button class="botoes" type="button">
+                                    <img src={FitnessDir} alt="" srcset="" />
+                                </button>
+                                <div>
+                                    <h1>Fitness Goals 2025</h1>
+                                </div>
+                            </div>
 
                         </div>
 
 
                     </div>
 
- 
+
+                    {/* <div class="direita-cabecalho">
+
+                        <h1>All Notes</h1>
+                        <input class="inpt" type="Search" placeholder="Search by tIthe,content or tags..." />
+                        <img src={Search} alt="" srcset="" />
+                        <img src={Engrenage} alt="" srcset="" />
+                        <img src={Topba} alt="" srcset="" />
+
+
+                    </div> */}
 
 
 
                 </main >
-    
 
 
-</div>
 
-</>
+            </div>
+
+        </>
 
     )
 }
