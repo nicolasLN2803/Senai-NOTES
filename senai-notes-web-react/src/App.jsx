@@ -2,6 +2,7 @@ import Login from "./pages/login"
 import NewUser from "./pages/new-user"
 import {BrowserRouter, Route, Routes } from "react-router-dom";
 import Notes from "./pages/senai-notes"
+import NSenha from "./pages/nova-senha";
 
 function App() {
 
@@ -34,6 +35,7 @@ return (
         <Route path="/new-user" element= {<NewUser/>}></Route>
         <Route path="/senai-notes" element= {isAuthenticated() == true? <Notes/> : <Login/>}></Route>
         <Route path="*" element= {<h1> NOT FOUND </h1>}></Route>
+        <Route path="/nova-senha" element= {<NSenha/>}></Route>
 
 
       </Routes>

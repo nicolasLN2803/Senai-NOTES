@@ -43,7 +43,7 @@ function Login() {
 
     if (response.ok == true) {
 
-      alert("Login realizado com sucesso!");
+      alert("Login successfully completed!");
       console.log(response)
 
       let json = await response.json();
@@ -63,10 +63,10 @@ function Login() {
 
       if (response.status == 401) {
 
-        alert("Credenciais Incorretas. Tente novamente.");
+        alert("Incorrect credentials. Please try again.");
       } else {
 
-        alert("Erro inesperado. Caso persista, contate os administradores.")
+        alert("Unexpected error. If it persists, please contact the administrators.")
       }
 
     }
@@ -90,14 +90,16 @@ function Login() {
 
                                 <p className="subtitulo"> Please log in to continue</p>
 
-                            <p className="textEmail">Email Adress</p>
+                            <p className="text-Email">Email Adress</p>
                             <input className="inpt" value={email} onChange={event => setEmail(event.target.value)}  type="email" placeholder="email@example.com" />
-
-                            <p className="textPassword">Password</p>
-                            <input className="inpt"  value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="password" />
-                            <a className="senhaEsquecida" href="/nova-senha"> Forgot </a>
                             
-                            <button className="btm" onClick={onLoginCLick}>Login </button>
+
+                            <div className="Linha-da-senha" href="/new-password"><p className="textPassword">Password</p>
+                             <a className="senhaEsquecida" href="/nova-senha"> Forgot </a></div>
+                            <input className="inpt"  value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="password" />
+                           
+                            
+                            <button className="btm" onClick={onLoginCLick}> Login </button>
 
                             <img className="barra" src={bar} alt=""></img>
 

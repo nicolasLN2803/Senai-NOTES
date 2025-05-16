@@ -31,6 +31,7 @@
     background-color: #F7F9FB;
     border-radius: 10px;
     border: none;
+    
     /* Define a cor do fundo e os espaçamento interno */
 
     
@@ -116,21 +117,11 @@ display: flex;
 justify-content: flex-start;
 margin-left: 100px;
 font-family: "inter";
-font-size: 14px;
+font-family: 100px;
 
 }
 
-.textEmail {
 
-display: flex;
-justify-content: flex-start;
-margin-left: 100px;
-font-family: "inter";
-font-size: 14px;
-
-margin-top: 50px;
-
-}
 
 .form-hint {
 
@@ -145,5 +136,37 @@ margin-top: 50px;
     
 
     font-size: 14px;
+    color:grey;
+
+}
+
+.Linha-da-senha {
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-left: 35px;
+
+}
+
+.senhaEsquecida {
+
+    font-family: "Inter";
+    font-weight: auto;
+    font-size: 14px;
+    color:grey;
+
+    margin-right: 135px;
+
+}
+
+.text-Email {
+    display: flex
+;
+    justify-content: flex-start;
+    margin-left: 135px;
+    font-family: "inter";
+    font-size: 14px;
+    margin-top: 50px;
 
 }

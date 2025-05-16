@@ -16,6 +16,75 @@
       "id": "628f",
       "email": "bolinhas123@gmail.com",
       "password": "bolinhas123"
+    },
+    {
+      "id": "59c5",
+      "email": "bolinhas123@gmail.com",
+      "password": "bolinhas123"
+    }
+  ],
+  "esquecerSenha": [
+    {
+      "id": "1",
+      "name": "Kaue",
+      "email": "kaue@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "62b4",
+      "name": "Teste",
+      "email": "Teste@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "628f",
+      "email": "bolinhas123@gmail.com",
+      "password": "bolinhas123"
+    },
+    {
+      "id": "59c5",
+      "email": "bolinhas123@gmail.com",
+      "password": "bolinhas123"
+    }
+  ],
+  "resetSenha": [
+    {
+      "id": "1",
+      "name": "Kaue",
+      "email": "kaue@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "62b4",
+      "name": "Teste",
+      "email": "Teste@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "628f",
+      "email": "bolinhas123@gmail.com",
+      "password": "bolinhas123"
+    },
+    {
+      "id": "59c5",
+      "email": "bolinhas123@gmail.com",
+      "password": "bolinhas123"
+    },
+    {
+      "id": "a9ad",
+      "email": "bolinhas123@gmail.com"
+    },
+    {
+      "id": "d0f3",
+      "email": "bolinhas123@gmail.com"
+    },
+    {
+      "id": "dfb1",
+      "email": "bolinhas123@gmail.com"
+    },
+    {
+      "id": "74dd",
+      "email": "bolinhas123@gmail.com"
     }
   ]
 }

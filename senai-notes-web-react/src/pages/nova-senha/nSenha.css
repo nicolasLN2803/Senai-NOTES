@@ -27,7 +27,7 @@
 
     padding: 10px;
     width: 377px;
-    margin-bottom: 16px;
+    margin-bottom: 50px;
     background-color: #F7F9FB;
     border-radius: 10px;
     border: none;
@@ -102,10 +102,14 @@ size: 1px;
     border-radius: 15px;
     text-align: center;
     justify-content: center;
-    height: 60vh;
+    height: 40vh;
     background-color: white;
     width: 30vw;
     box-shadow: 1px 8px 8px 8px #ccc;
+
+    
+
+   
 
 
 }
@@ -124,11 +128,12 @@ font-size: 14px;
 
 display: flex;
 justify-content: flex-start;
-margin-left: 100px;
+margin-left: 135px;
 font-family: "inter";
 font-size: 14px;
 
 margin-top: 50px;
+
 
 }
 
