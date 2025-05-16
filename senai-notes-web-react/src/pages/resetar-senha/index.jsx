@@ -1,9 +1,11 @@
-import "./login.css"
+import "./resetar-senha.css"
 import logo from "../../assets/imgs/logo.svg"
 import bar from "../../assets/imgs/Divider.svg"
+import Olho from "../../assets/imgs/Vector.svg"
 import { useState } from "react";
 
-function Login() {
+
+function ResetarSenha() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -83,25 +85,27 @@ function Login() {
                     <div className="login-container">
                         <div className="borda-interna">
                         <img className="logo" src={logo} alt=""></img>
+                        
 
                             <h1
                                 id="meutitulo"
-                                className="titulo"> Welcome to note </h1>
+                                className="titulo"> Reset Your Password </h1>
 
-                                <p className="subtitulo"> Please log in to continue</p>
+                                <p className="subtitulo"> Choose a new password to secure your account.</p>
 
-                            <p className="textEmail">Email Adress</p>
-                            <input className="inpt" value={email} onChange={event => setEmail(event.target.value)}  type="email" placeholder="email@example.com" />
-
-                            <p className="textPassword">Password</p>
-                            <input className="inpt"  value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="password" />
-                            <a className="senhaEsquecida" href="/nova-senha"> Forgot </a>
+                            <p className="novaSenha">New Password</p>
+                            <input className="inpt" value={email} onChange={event => setEmail(event.target.value)}  type="email" placeholder="" />
                             
-                            <button className="btm" onClick={onLoginCLick}>Login </button>
+
+                            <p className="textPassword">Confirm New Password</p>
+                            <input className="inpt"  value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="" />
+
+                            
+                            <button className="btm" onClick={onLoginCLick}> Reset Password </button>
 
                             <img className="barra" src={bar} alt=""></img>
 
-                            <a className="form-hint" href="/new-user"> No account yet? Sign Up </a>
+                      
 
                             </div>
 
@@ -118,5 +122,5 @@ function Login() {
 
 
 
-export default Login
+export default ResetarSenha
 

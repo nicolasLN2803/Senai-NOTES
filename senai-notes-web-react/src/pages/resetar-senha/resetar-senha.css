@@ -102,7 +102,7 @@ size: 1px;
     border-radius: 15px;
     text-align: center;
     justify-content: center;
-    height: 60vh;
+    height: 40vh;
     background-color: white;
     width: 30vw;
     box-shadow: 1px 8px 8px 8px #ccc;
@@ -114,17 +114,17 @@ size: 1px;
 
 display: flex;
 justify-content: flex-start;
-margin-left: 100px;
+margin-left: 135px;
 font-family: "inter";
 font-size: 14px;
 
 }
 
-.textEmail {
+.novaSenha {
 
 display: flex;
 justify-content: flex-start;
-margin-left: 100px;
+margin-left: 135px;
 font-family: "inter";
 font-size: 14px;
 
@@ -132,18 +132,5 @@ margin-top: 50px;
 
 }
 
-.form-hint {
 
-    
-    font-family: "Inter";
-    font-weight: auto;
-    display: flex;
-    flex-direction: column;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
-
-    font-size: 14px;
-
-}
