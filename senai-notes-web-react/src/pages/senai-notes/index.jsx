@@ -32,12 +32,6 @@ import cooking1tag from "../../assets/imgs/cooking1.svg"
 import recipestag from "../../assets/imgs/recipestag.svg"
 
 
-
-
-
-
-
-
 function Notes() {
 
     return (
@@ -117,19 +111,15 @@ function Notes() {
                     <div class="direita-cabecalho">
 
                         <h1>All Notes</h1>
-                        <input class="inpt" type="Search" placeholder="Search by tIthe,content or tags..." />
-                        <img src={Search} alt="" srcset="" />
-                        <img src={Engrenage} alt="" srcset="" />
-                        <img src={Topba} alt="" srcset="" />
-
-
+                        <div className="pesquisa">
+                            <img src={Search} alt="" srcset="" />
+                            <input class="input" type="Search" placeholder="Search by tIthe,content or tags..." />
+                            <img src={Engrenage} alt="" srcset="" />
+                            <img src={Topba} alt="" srcset="" />
+                        </div>
                     </div>
 
                     <div class="caixa-direita">
-
-
-
-
 
                         <div class="direita-inferior">
 
@@ -290,20 +280,15 @@ function Notes() {
                         <div class="direita-meio">
 
                             <div class="imagem-central">
-                                0
-                            </div>
+                             </div>
+
+                               <div class="textoImage">
+                                    <h1>React Performanc Optimization</h1>
+                                </div>
 
                         </div>
 
-
-
-
-
                     </div>
-
-
-
-
 
                 </main >
 
