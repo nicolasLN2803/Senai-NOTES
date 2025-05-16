@@ -22,6 +22,19 @@ import Weekly from "../../assets/imgs/Weekly.svg"
 import Meal from "../../assets/imgs/Meal.svg"
 import Reading from "../../assets/imgs/Reading.svg"
 import FitnessDir from "../../assets/imgs/Fitness.svg"
+import devdir from "../../assets/imgs/tag.svg"
+import reacttag from "../../assets/imgs/reacttag.svg"
+import traveltag from "../../assets/imgs/traveltag.svg"
+import personatag from "../../assets/imgs/personatag.svg"
+
+
+import cooking1tag from "../../assets/imgs/cooking1.svg"
+import recipestag from "../../assets/imgs/recipestag.svg"
+
+
+
+
+
 
 
 
@@ -52,7 +65,7 @@ function Notes() {
                     </div>
 
 
-                     <div class="inferior-esquerda">
+                    <div class="inferior-esquerda">
 
                         <button class="botoes" type="button">
                             <img src={Cooking} alt="" srcset="" />
@@ -101,20 +114,46 @@ function Notes() {
 
                 <main>
 
+                    <div class="direita-cabecalho">
+
+                        <h1>All Notes</h1>
+                        <input class="inpt" type="Search" placeholder="Search by tIthe,content or tags..." />
+                        <img src={Search} alt="" srcset="" />
+                        <img src={Engrenage} alt="" srcset="" />
+                        <img src={Topba} alt="" srcset="" />
+
+
+                    </div>
+
                     <div class="caixa-direita">
 
-                        <div class="create-notes" >
-                            <button class="create-new" type="button"> + Create New Notes</button>
-                        </div>
+
+
+
 
                         <div class="direita-inferior">
+
+                            <div class="create-notes" >
+                                <button class="create-new" type="button"> + Create New Notes</button>
+                            </div>
 
                             <div class="botao">
                                 <button class="botoes" type="button">
                                     <img src={Rectangle} alt="" srcset="" />
                                 </button>
+
                                 <div>
                                     <h1>React Performance Optimization</h1>
+                                    <div>
+                                        <button class="botoes" type="button">
+                                            <img src={devdir} alt="" srcset="" />
+                                        </button>
+
+                                        <button class="botoes" type="button">
+                                            <img src={reacttag} alt="" srcset="" />
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
 
@@ -122,10 +161,22 @@ function Notes() {
                                 <button class="botoes" type="button">
                                     <img src={Rectangle3} alt="" srcset="" />
                                 </button>
+
                                 <div>
                                     <h1>Japan Travel Planning</h1>
+                                    <div>
+                                        <button class="botoes" type="button">
+                                            <img src={traveltag} alt="" srcset="" />
+                                        </button>
+
+                                        <button class="botoes" type="button">
+                                            <img src={personatag} alt="" srcset="" />
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
+
 
                             <div class="botao">
                                 <button class="botoes" type="button">
@@ -133,25 +184,60 @@ function Notes() {
                                 </button>
                                 <div>
                                     <h1>Favorite Pasta Recipes</h1>
+                                    <div>
+                                        <button class="botoes" type="button">
+                                            <img src={cooking1tag} alt="" srcset="" />
+                                        </button>
+
+                                        <button class="botoes" type="button">
+                                            <img src={recipestag} alt="" srcset="" />
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
+
+
 
                             <div class="botao">
                                 <button class="botoes" type="button">
                                     <img src={Weekly} alt="" srcset="" />
                                 </button>
+
                                 <div>
                                     <h1>Weekly Workout Plan</h1>
+                                    <div>
+                                        <button class="botoes" type="button">
+                                            <img src={devdir} alt="" srcset="" />
+                                        </button>
+
+                                        <button class="botoes" type="button">
+                                            <img src={reacttag} alt="" srcset="" />
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
+
 
 
                             <div class="botao">
                                 <button class="botoes" type="button">
                                     <img src={Meal} alt="" srcset="" />
                                 </button>
+
                                 <div>
                                     <h1>Meal Prep Ideas</h1>
+                                    <div>
+                                        <button class="botoes" type="button">
+                                            <img src={devdir} alt="" srcset="" />
+                                        </button>
+
+                                        <button class="botoes" type="button">
+                                            <img src={reacttag} alt="" srcset="" />
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
 
@@ -160,8 +246,19 @@ function Notes() {
                                 <button class="botoes" type="button">
                                     <img src={Reading} alt="" srcset="" />
                                 </button>
+
                                 <div>
                                     <h1>Reading List</h1>
+                                    <div>
+                                        <button class="botoes" type="button">
+                                            <img src={devdir} alt="" srcset="" />
+                                        </button>
+
+                                        <button class="botoes" type="button">
+                                            <img src={reacttag} alt="" srcset="" />
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
 
@@ -171,27 +268,40 @@ function Notes() {
                                 <button class="botoes" type="button">
                                     <img src={FitnessDir} alt="" srcset="" />
                                 </button>
+
                                 <div>
-                                    <h1>Fitness Goals 2025</h1>
+                                    <h1>Reading List</h1>
+                                    <div>
+                                        <button class="botoes" type="button">
+                                            <img src={devdir} alt="" srcset="" />
+                                        </button>
+
+                                        <button class="botoes" type="button">
+                                            <img src={reacttag} alt="" srcset="" />
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
 
                         </div>
 
 
+                        <div class="direita-meio">
+
+                            <div class="imagem-central">
+                                0
+                            </div>
+
+                        </div>
+
+
+
+
+
                     </div>
 
 
-                    {/* <div class="direita-cabecalho">
-
-                        <h1>All Notes</h1>
-                        <input class="inpt" type="Search" placeholder="Search by tIthe,content or tags..." />
-                        <img src={Search} alt="" srcset="" />
-                        <img src={Engrenage} alt="" srcset="" />
-                        <img src={Topba} alt="" srcset="" />
-
-
-                    </div> */}
 
 
 
