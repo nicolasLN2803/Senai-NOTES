@@ -1,8 +1,9 @@
-import Login from "./pages/login"
-import NewUser from "./pages/new-user"
+import Login from "./pages/login";
+import NewUser from "./pages/new-user";
 import {BrowserRouter, Route, Routes } from "react-router-dom";
 import Notes from "./pages/senai-notes";
 import NSenha from "./pages/nova-senha";
+import ResetarSenha from "./pages/resetar-senha";
 
 function App() {
 
@@ -35,6 +36,7 @@ return (
         <Route path="/senai-notes" element= {<Notes/>}></Route>
         <Route path="*" element= {<h1> Not Found </h1>}></Route>
         <Route path="/nova-senha" element= {<NSenha/>}></Route>
+        <Route path="/resetar-senha" element= {<ResetarSenha/>}></Route>
 
 
       </Routes>
@@ -43,7 +45,7 @@ return (
     
 
    
-
+  
   </>
 )
 

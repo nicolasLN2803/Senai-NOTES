@@ -7,21 +7,28 @@ import { useState } from "react";
 
 function ResetarSenha() {
 
-    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [newPassword, setNewPassword] = useState("");
 
      const onLoginCLick = async () => {
 
-    if (email == "") {
+    if (password == "") {
 
-      alert("Email nao pode estar vazio.");
+      alert("The password cannot be empty.");
       return;
 
     }
 
-    if (password == ""){
+    if (newPassword == "") {
 
-      alert("Senha nao pode estar vazio.");
+      alert("The New password cannot be empty.");
+      return;
+
+    }
+
+    if (newPassword == password){
+
+      alert("The passwords do not match.");
       return;
 
     }
@@ -35,8 +42,8 @@ function ResetarSenha() {
       body: JSON.stringify({
 
 
-        email: email,
-        password: password
+        email: password,
+        password: newPassword
 
       })
     });
@@ -45,30 +52,30 @@ function ResetarSenha() {
 
     if (response.ok == true) {
 
-      alert("Login realizado com sucesso!");
+      alert("Password change completed successfully!");
       console.log(response)
 
-      let json = await response.json();
+      // let json = await response.json();
 
-      let token = json.accessToken;
-      let userId = json.user.id;
+      // let token = json.accessToken;
+      // let userId = json.user.id;
 
-      console.log("Token: " + token);
+      // console.log("Token: " + token);
 
-      // LOCAL STORAGE
-      localStorage.setItem("meuToken", token);
-      localStorage.setItem("meuId", userId);
+      // // LOCAL STORAGE
+      // localStorage.setItem("meuToken", token);
+      // localStorage.setItem("meuId", userId);
 
-      window.location.href = "/senai-notes"
+      window.location.href = "/login"
 
     } else {
 
       if (response.status == 401) {
 
-        alert("Credenciais Incorretas. Tente novamente.");
+        alert("Incorrect credentials. Please try again.");
       } else {
 
-        alert("Erro inesperado. Caso persista, contate os administradores.")
+        alert("Unexpected error. If it persists, please contact the administrators.")
       }
 
     }
@@ -83,7 +90,7 @@ function ResetarSenha() {
                 <main className="page-container">
 
                     <div className="login-container">
-                        <div className="borda-interna">
+                        <div className="BORDA-interna">
                         <img className="logo" src={logo} alt=""></img>
                         
 
@@ -94,11 +101,11 @@ function ResetarSenha() {
                                 <p className="subtitulo"> Choose a new password to secure your account.</p>
 
                             <p className="novaSenha">New Password</p>
-                            <input className="inpt" value={email} onChange={event => setEmail(event.target.value)}  type="email" placeholder="" />
+                            <input className="inpt" value={password} onChange={event => setPassword(event.target.value)}  type="password" placeholder="" />
                             
 
                             <p className="textPassword">Confirm New Password</p>
-                            <input className="inpt"  value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="" />
+                            <input className="inpt"  value={newPassword} onChange={event => setNewPassword(event.target.value)} type="new-password" placeholder="" />
 
                             
                             <button className="btm" onClick={onLoginCLick}> Reset Password </button>

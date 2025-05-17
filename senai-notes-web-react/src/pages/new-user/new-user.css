@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Special+Gothic+Condensed+One&display=swap');
 
+.borda-interna {
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    height: 55vh;
+    background-color: white;
+    width: 30vw;
+    box-shadow: 1px 8px 8px 8px #ccc;
+}
 
 .page-container {
 
@@ -87,19 +96,6 @@ size: 1px;
 
 }
 
-.borda-interna {
-
-    
-    border-radius: 15px;
-    text-align: center;
-    justify-content: center;
-    height: 60vh;
-    background-color: white;
-    width: 30vw;
-    box-shadow: 1px 8px 8px 8px #ccc;
-
-
-}
 
 .textPassword {
 
@@ -152,3 +148,5 @@ margin-top: 50px;
 
 
 }
+
+

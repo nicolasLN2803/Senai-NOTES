@@ -34,18 +34,18 @@ function NSenha() {
       alert("Link Sent!");
       console.log(response)
 
-      let json = await response.json();
+      // let json = await response.json();
 
-      let token = json.accessToken;
-      let userId = json.user.id;
+      // // let token = json.accessToken;
+      // // let userId = json.user.id;
 
-      console.log("Token: " + token);
+      // console.log("Token: " + token);
 
-      // LOCAL STORAGE
-      localStorage.setItem("meuToken", token);
-      localStorage.setItem("meuId", userId);
+      // // LOCAL STORAGE
+      // localStorage.setItem("meuToken", token);
+      // localStorage.setItem("meuId", userId);
 
-      window.location.href = "/senai-notes"
+      window.location.href = "/resetar-senha"
 
     } else {
 
@@ -69,7 +69,7 @@ function NSenha() {
             <main className="page-container">
 
                 <div className="login-container">
-                    <div className="borda-interna">
+                    <div className="borda-Interna">
                         <img className="logo" src={logo} alt=""></img>
 
                         <h1

@@ -41,6 +41,20 @@ function Login() {
 
     console.log(response);
 
+    if(email == "teste@teste.com" && password == "teste"){
+
+        let token = "meutoken";
+        let userId = "meuId";
+
+        localStorage.setItem("meuToken", token)
+        localStorage.setItem("meuId", userId)
+
+        alert("Login successfully completed!");
+      
+         window.location.href = "/senai-notes"
+      
+      }
+
     if (response.ok == true) {
 
       alert("Login successfully completed!");

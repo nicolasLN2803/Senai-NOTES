@@ -43,17 +43,17 @@ function NewUser () {
 
     if (response.ok == true) {
 
-      alert("Cadastro realizado com sucesso!");
+      alert("Registration completed successfully!");
       console.log(response)
 
-      let json = await response.json();
+      // let json = await response.json();
 
-      let token = json.accessToken;
+      // let token = json.accessToken;
 
-      console.log("Token: " + token);
+      // console.log("Token: " + token);
 
-      // LOCAL STORAGE
-      localStorage.setItem("meuToken", token);
+      // // LOCAL STORAGE
+      // localStorage.setItem("meuToken", token);
 
       window.location.href = "/login"
 
@@ -61,10 +61,10 @@ function NewUser () {
 
       if (response.status == 401) {
 
-        alert("Credenciais Incorretas. Tente novamente.");
+        alert("Incorrect credentials. Please try again.");
       } else {
 
-        alert("Erro inesperado. Caso persista, contate os administradores.")
+        alert("Unexpected error. If it persists, please contact the administrators.")
       }
 
     }
