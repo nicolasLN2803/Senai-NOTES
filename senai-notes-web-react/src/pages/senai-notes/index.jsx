@@ -30,6 +30,15 @@ import personatag from "../../assets/imgs/personatag.svg"
 
 import cooking1tag from "../../assets/imgs/cooking1.svg"
 import recipestag from "../../assets/imgs/recipestag.svg"
+import LeftPanel from "../../componentes/left-panel";
+import tag3 from "../../assets/imgs/Tag (3).svg"
+import Properties from "../../assets/imgs/Properties.svg"
+import Vector1 from "../../assets/imgs/Vector1.svg"
+
+import Clock from "../../assets/imgs/Circle Clock.svg"
+
+
+
 
 
 function Notes() {
@@ -37,6 +46,8 @@ function Notes() {
     return (
         <>
             <div class="tela-principal">
+
+                {/* <LeftPanel/> */}
 
                 <header class="caixa-esquerda">
 
@@ -280,11 +291,60 @@ function Notes() {
                         <div class="direita-meio">
 
                             <div class="imagem-central">
-                             </div>
+                            </div>
 
-                               <div class="textoImage">
-                                    <h1>React Performanc Optimization</h1>
+                            <div class="textoImage">
+                                <h1>React Performance Optimization</h1>
+
+
+                                <div class="controle-tag">
+
+                                    <div class="tag-meio">
+
+                                        <img src={tag3} alt="" srcset="" />
+                                        <p>Tags</p>
+
+                                    </div>
+                                    <p>Dev,React
+                                    </p>
+
                                 </div>
+
+                                <div class="controle-tag">
+
+                                    <div class="tag-meio">
+
+                                        <img src={Clock} alt="" srcset="" />
+                                        <p>Tags</p>
+
+                                    </div>
+                                    <p>Dev,React
+                                    </p>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="linha-meio">
+
+
+                            </div>
+
+
+                            <div class="botao-inferior">
+                                <button class="save-note" type="button"> + Save Notes</button>
+
+                                <button class="cancel" typen="button">  Cancel
+                                </button>
+
+                            </div>
+
+
+
+
+
 
                         </div>
 
