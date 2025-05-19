@@ -29,7 +29,7 @@
     justify-content:space-around;
     width: 100vw;
     height: 100vh;
-    background-color: bisque;
+    /* background-color: bisque; */
 }
 
 
@@ -41,7 +41,7 @@
     padding-top: 1vw;
     border-right: 1px solid #E0E4EA;
     margin-left: 10px;
-    background-color: #335CFF;
+    /* background-color: #335CFF; */
 }
 
 .caixa-direita {
@@ -51,7 +51,7 @@
     display: flex;
     align-items: flex-start;
     margin-left: 10px;
-    background-color: aqua;
+    /* background-color: aqua; */
 
 }
 
@@ -76,7 +76,7 @@
     padding-left: 2vw;
     padding-right: 200px;
     border-bottom: 1px solid #E0E4EA;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 
 
 }
@@ -97,7 +97,7 @@
     display: flex;
     align-items: center;
     font-size: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     border-bottom: 1px solid #E0E4EA;
 }
 
@@ -117,7 +117,7 @@
     border-left: 1px solid #E0E4EA;
     margin-bottom: 100px;
     border-bottom: 1px solid #E0E4EA;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
 
 
 }
@@ -135,7 +135,7 @@
 .textoImage {
     margin-bottom: 10px;
     font-size: 15px;
-    margin-left: 80px;
+    margin-left: 35px;
     border-radius: 10px; 
     height: 200px;
 
@@ -217,7 +217,7 @@
 
 .botao-inferior {
     margin-top: 20px;
-    height: 88px;
+    height: 70px;
     width: 200px;
     display: flex;
     border-radius: 15px;
@@ -251,7 +251,7 @@
     height: 86vh;
     width: 90vw;
     justify-content: center;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .archived {
@@ -265,6 +265,4 @@
     margin-left: 20px;
         align-items: center;
 }
-
-
 

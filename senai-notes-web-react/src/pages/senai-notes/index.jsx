@@ -268,7 +268,7 @@ function Notes() {
 
                             </div>
 
-                            <div class="botao">
+                            {/* <div class="botao">
                                 <button class="botoes" type="button">
                                     <img src={FitnessDir} alt="" srcset="" />
                                 </button>
@@ -286,7 +286,7 @@ function Notes() {
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                         </div>
 
