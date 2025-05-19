@@ -35,87 +35,73 @@ import Archive1 from "../../assets/imgs/Archive.svg"
 
 import Delete from "../../assets/imgs/delete.svg"
 
-
-
-
-
-
-
-
-
-
 function Notes() {
 
     return (
         <>
-            <div class="tela-principal">
+            <div className="tela-principal">
 
-                <header class="caixa-esquerda">
+                <header className="caixa-esquerda">
 
-                    <div class="superior-senai">
-
-                        <button class="botoes" type="button">
-                            <img src={SenaiNotes} alt="" srcset="" />
+                    <button className="botoes" type="button">
+                        <img src={SenaiNotes} alt="" srcset="" />
 
 
-                        </button>
+                    </button>
 
-                    </div>
-
-                    <div class="superior-esquerda">
-                        <button class="botoes" type="button">
-                            <img src={AlNotes} alt="" srcset="" />
-                            Al Notes </button>
-                        <div class="seta">
-                            <img src={ChevronRight} alt="" srcset="" />
-
+                    <button className="botoes-notes" type="button">
+                        <img src={AlNotes} alt="" srcset="" />
+                        Al Notes
+                        <div className="controle-seta">
+                            <img className="seta" src={ChevronRight} />
                         </div>
+                    </button>
 
-                        <button class="botoes" type="button">
-                            <img src={Archived} alt="" srcset="" />
-                            Archived Notes </button>
-                    </div>
+                    <button className="botoes-notes" type="button">
+                        <img src={Archived} alt="" srcset="" />
+                        Archived Notes </button>
 
 
-                    <div class="inferior-esquerda">
 
-                        <button class="botoes" type="button">
+                    <div className="inferior-esquerda">
+
+                        <button className="botoes" type="button">
                             <img src={Cooking} alt="" srcset="" />
                             Cooking </button>
 
-                        <button class="botoes" type="button">
+                        <button className="botoes" type="button">
                             <img src={dev} alt="" srcset="" />
                             Dev </button>
 
-                        <button class="botoes" type="button">
+                        <button className="botoes" type="button">
                             <img src={Fitness} alt="" srcset="" />
                             Fitness </button>
 
-                        <button class="botoes" type="button">
+                        <button className="botoes" type="button">
                             <img src={Health} alt="" srcset="" />
                             Health </button>
 
-                        <button class="botoes" type="button">
+                        <button className="botoes" type="button">
                             <img src={Personal} alt="" srcset="" />
                             Personal </button>
 
-                        <button class="botoes" type="button">
+                        <button className="botoes" type="button">
                             <img src={React} alt="" srcset="" />
                             React</button>
 
-                        <button class="botoes" type="button">
+                        <button className="botoes" type="button">
                             <img src={Recipes} alt="" srcset="" />
                             React</button>
 
-                        <button class="botoes" type="button">
+                        <button className="botoes" type="button">
                             <img src={Shooping} alt="" srcset="" />
                             Recipes </button>
 
-                        <button class="botoes" type="button">
+                        <button className="botoes" type="button">
                             <img src={Travel} alt="" srcset="" />
                             Shooping </button>
 
-                        <button class="botoes" type="button">
+                        <button className="botoes" type="button">
                             <img src={TaypeScrit} alt="" srcset="" />
                             Travel </button>
 
@@ -126,39 +112,39 @@ function Notes() {
 
                 <main>
 
-                    <div class="direita-cabecalho">
+                    <div className="direita-cabecalho">
 
                         <h1>All Notes</h1>
                         <div className="pesquisa">
                             <img src={Search} alt="" srcset="" />
-                            <input class="input" type="Search" placeholder="Search by tIthe,content or tags..." />
+                            <input className="input" type="Search" placeholder="Search by tIthe,content or tags..." />
                             <img src={Engrenage} alt="" srcset="" />
                             <img src={Topba} alt="" srcset="" />
                         </div>
                     </div>
 
-                    <div class="caixa-direita">
+                    <div className="caixa-direita">
 
 
-                        <div class="direita-inferior">
+                        <div className="direita-inferior">
 
-                            <div class="create-notes" >
-                                <button class="create-new" type="button"> + Create New Notes</button>
+                            <div className="create-notes" >
+                                <button className="create-new" type="button"> + Create New Notes</button>
                             </div>
 
-                            <div class="botao">
-                                <button class="botoes" type="button">
+                            <div className="botao">
+                                <button className="botoes" type="button">
                                     <img src={Rectangle} alt="" srcset="" />
                                 </button>
 
                                 <div>
                                     <h1>React Performance Optimization</h1>
-                                    <div>
-                                        <button class="botoes" type="button">
+                                    <div className="controle-tag">
+                                        <button className="botoes" type="button">
                                             <img src={devdir} alt="" srcset="" />
                                         </button>
 
-                                        <button class="botoes" type="button">
+                                        <button className="botoes" type="button">
                                             <img src={reacttag} alt="" srcset="" />
                                         </button>
 
@@ -166,19 +152,19 @@ function Notes() {
                                 </div>
                             </div>
 
-                            <div class="botao">
-                                <button class="botoes" type="button">
+                            <div className="botao">
+                                <button className="botoes" type="button">
                                     <img src={Rectangle3} alt="" srcset="" />
                                 </button>
 
                                 <div>
                                     <h1>Japan Travel Planning</h1>
-                                    <div>
-                                       <button class="botoes" type="button">
+                                    <div className="controle-tag">
+                                        <button className="botoes" type="button">
                                             <img src={devdir} alt="" srcset="" />
                                         </button>
 
-                                        <button class="botoes" type="button">
+                                        <button className="botoes" type="button">
                                             <img src={personatag} alt="" srcset="" />
                                         </button>
 
@@ -187,18 +173,18 @@ function Notes() {
                             </div>
 
 
-                            <div class="botao">
-                                <button class="botoes" type="button">
+                            <div className="botao">
+                                <button className="botoes" type="button">
                                     <img src={FavoritePasta} alt="" srcset="" />
                                 </button>
                                 <div>
                                     <h1>Favorite Pasta Recipes</h1>
-                                    <div>
-                                        <button class="botoes" type="button">
+                                    <div className="controle-tag">
+                                        <button className="botoes" type="button">
                                             <img src={cooking1tag} alt="" srcset="" />
                                         </button>
 
-                                      <button class="botoes" type="button">
+                                        <button className="botoes" type="button">
                                             <img src={cooking1tag} alt="" srcset="" />
                                         </button>
 
@@ -206,19 +192,19 @@ function Notes() {
                                 </div>
                             </div>
 
-                            <div class="botao">
-                                <button class="botoes" type="button">
+                            <div className="botao">
+                                <button className="botoes" type="button">
                                     <img src={Weekly} alt="" srcset="" />
                                 </button>
 
                                 <div>
                                     <h1>Weekly Workout Plan</h1>
-                                    <div>
-                                        <button class="botoes" type="button">
+                                    <div className="controle-tag">
+                                        <button className="botoes" type="button">
                                             <img src={devdir} alt="" srcset="" />
                                         </button>
 
-                                        <button class="botoes" type="button">
+                                        <button className="botoes" type="button">
                                             <img src={reacttag} alt="" srcset="" />
                                         </button>
 
@@ -226,19 +212,19 @@ function Notes() {
                                 </div>
                             </div>
 
-                            <div class="botao">
-                                <button class="botoes" type="button">
+                            <div className="botao">
+                                <button className="botoes" type="button">
                                     <img src={Meal} alt="" srcset="" />
                                 </button>
 
                                 <div>
                                     <h1>Meal Prep Ideas</h1>
-                                    <div>
-                                        <button class="botoes" type="button">
+                                    <div className="controle-tag">
+                                        <button className="botoes" type="button">
                                             <img src={devdir} alt="" srcset="" />
                                         </button>
 
-                                        <button class="botoes" type="button">
+                                        <button className="botoes" type="button">
                                             <img src={reacttag} alt="" srcset="" />
                                         </button>
 
@@ -247,19 +233,19 @@ function Notes() {
                             </div>
 
 
-                            <div class="botao">
-                                <button class="botoes" type="button">
+                            <div className="botao">
+                                <button className="botoes" type="button">
                                     <img src={Reading} alt="" srcset="" />
                                 </button>
 
                                 <div>
                                     <h1>Reading List</h1>
-                                    <div>
-                                        <button class="botoes" type="button">
+                                    <div className="controle-tag">
+                                        <button className="botoes" type="button">
                                             <img src={devdir} alt="" srcset="" />
                                         </button>
 
-                                        <button class="botoes" type="button">
+                                        <button className="botoes" type="button">
                                             <img src={reacttag} alt="" srcset="" />
                                         </button>
 
@@ -268,54 +254,56 @@ function Notes() {
 
                             </div>
 
-                            {/* <div class="botao">
-                                <button class="botoes" type="button">
-                                    <img src={FitnessDir} alt="" srcset="" />
+                            <div className="botao">
+                                <button className="botoes" type="button">
+                                    <img src={Reading} alt="" srcset="" />
                                 </button>
 
                                 <div>
                                     <h1>Reading List</h1>
-                                    <div>
-                                        <button class="botoes" type="button">
+                                    <div className="controle-tag">
+                                        <button className="botoes" type="button">
                                             <img src={devdir} alt="" srcset="" />
                                         </button>
 
-                                        <button class="botoes" type="button">
+                                        <button className="botoes" type="button">
                                             <img src={reacttag} alt="" srcset="" />
                                         </button>
 
                                     </div>
                                 </div>
-                            </div> */}
+
+                            </div>
+
 
                         </div>
 
 
-                        <div class="direita-meio">
+                        <div className="direita-meio">
 
-                            <div class="imagem-central">
+                            <div className="imagem-central">
                             </div>
 
-                            <div class="textoImage">
+                            <div className="textoImage">
                                 <h1>React Performance Optimization</h1>
 
 
-                                <div class="controle-tag">
+                                <div className="controle-tag">
 
-                                    <div class="tag-meio">
+                                    <div className="tag-meio">
 
                                         <img src={tag3} alt="" srcset="" />
                                         <p>Tags</p>
 
                                     </div>
-                                    <p>Dev,React
-                                    </p>
+
+
 
                                 </div>
 
-                                <div class="controle-tag">
+                                <div className="controle-tag">
 
-                                    <div class="tag-meio">
+                                    <div className="tag-meio">
 
                                         <img src={Clock} alt="" srcset="" />
                                         <p>Tags</p>
@@ -327,16 +315,18 @@ function Notes() {
                             </div>
 
 
-                            <div class="linha-meio">
+                            <div className="linha-meio">
+
+                                <h1>Anotações realizadas neste espaço</h1>
 
                             </div>
 
-                            <div class="controle-botao">
+                            <div className="controle-botao">
 
-                                <div class="botao-inferior">
-                                    <button class="save-note" type="button"> + Save Notes</button>
+                                <div className="botao-inferior">
+                                    <button className="save-note" type="button"> + Save Notes</button>
 
-                                    <button class="cancel" typen="button">  Cancel
+                                    <button className="cancel" typen="button">  Cancel
                                     </button>
 
 
@@ -346,17 +336,20 @@ function Notes() {
 
                         </div>
 
-                        <div class="direita-total">
+                        <div className="direita-total">
 
-                            <div class="archived" >
-                                <img src={Archive1} alt="" srcset="" />
-                                <button class="archived-notes" type="button"> Archived Notes</button>
+                            <div className="archived" >
+
+                                <button className="archived-notes" type="button">
+                                    <img src={Archive1} alt="" srcset="" />
+                                    Archived Notes</button>
+
+                                <button className="delete-notes" type="button">
+                                    <img src={Delete} alt="" srcset="" />
+                                    Delete Notes</button>
+
                             </div>
 
-                            <div class="delete" >
-                                <img src={Delete} alt="" srcset="" />
-                                <button class="delete-notes" type="button"> Delete Notes</button>
-                            </div>
 
                         </div>
                     </div>
