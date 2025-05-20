@@ -428,22 +428,17 @@ height: 100%;
 
 }
 
-<<<<<<< HEAD
 .texto-base {
-
-font-size: 35px;
-=======
-<<<<<<< HEAD
-=======
+    font-size: 35px;
+}
+    
 body.darkmode .direita-cabecalho {
 
     background-color: black;
->>>>>>> 780ce74f304a04da829fc4a96e62e948ed28b44f
 
 }
 
 
-<<<<<<< HEAD
 .text-control {
 
 
@@ -489,7 +484,6 @@ margin-bottom: 10px;
 
 
 }
-=======
 body.darkmode .caixa-esquerda {
 
     background-color: black;
@@ -528,9 +522,3 @@ body.darkmode .direita-total button{
 
     background-color: rgb(255, 255, 255);
 }
-
-
-
-
->>>>>>> 87faa87a6059724ad55975293be5f339b07bdcce
->>>>>>> 780ce74f304a04da829fc4a96e62e948ed28b44f
