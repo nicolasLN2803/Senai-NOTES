@@ -4,6 +4,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    outline: none;
 }
 
 .botoes-notes {
@@ -427,6 +428,10 @@ height: 100%;
 
 }
 
+.texto-base {
+    font-size: 35px;
+}
+    
 body.darkmode .direita-cabecalho {
 
     background-color: black;
@@ -434,6 +439,51 @@ body.darkmode .direita-cabecalho {
 }
 
 
+.text-control {
+
+
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+
+}
+
+.texto-titulo {
+
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.controle-tag {
+
+display: flex;
+margin-right: 100px;
+
+}
+
+.tag-meio {
+
+display: flex;
+font-size: 15px;
+font-size: 15px;
+font-weight: bold;
+margin-bottom: 10px;
+
+
+}
+
+.tag-meio input {
+
+    border: none;
+    margin-left: 15px;
+
+
+}
 body.darkmode .caixa-esquerda {
 
     background-color: black;
@@ -472,6 +522,7 @@ body.darkmode .direita-total button{
 
     background-color: rgb(255, 255, 255);
 }
+
 
 
 
