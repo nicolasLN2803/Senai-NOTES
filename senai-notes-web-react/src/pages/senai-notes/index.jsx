@@ -24,10 +24,8 @@ import Reading from "../../assets/imgs/Reading.svg"
 import FitnessDir from "../../assets/imgs/Fitness.svg"
 import devdir from "../../assets/imgs/tag.svg"
 import reacttag from "../../assets/imgs/reacttag.svg"
-import traveltag from "../../assets/imgs/traveltag.svg"
 import personatag from "../../assets/imgs/personatag.svg"
 import cooking1tag from "../../assets/imgs/cooking1.svg"
-import recipestag from "../../assets/imgs/recipestag.svg"
 import tag3 from "../../assets/imgs/Tag (3).svg"
 import Clock from "../../assets/imgs/Circle Clock.svg"
 import ChevronRight from "../../assets/imgs/Chevron Right MD.svg"
@@ -381,7 +379,7 @@ function Notes() {
                                     <img src={Delete} alt="" srcset="" />
                                     Delete Notes</button>
 
-                                    <button onClick={() => ativarDesativarDarkMode()} className="delete-notes" type="button">
+                                <button onClick={() => ativarDesativarDarkMode()} className="delete-notes" type="button">
                                     <img src={Delete} alt="" srcset="" />
                                     Dark mode</button>
 
