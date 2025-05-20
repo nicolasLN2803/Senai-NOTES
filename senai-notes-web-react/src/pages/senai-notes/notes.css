@@ -427,3 +427,55 @@ height: 100%;
 
 }
 
+<<<<<<< HEAD
+=======
+body.darkmode .direita-cabecalho {
+
+    background-color: black;
+
+}
+
+
+body.darkmode .caixa-esquerda {
+
+    background-color: black;
+}
+
+body.darkmode .direita-inferior {
+
+    background-color: black;
+}
+
+body.darkmode .direita-meio {
+
+    background-color: black;
+}
+
+body.darkmode .direita-total {
+
+    background-color: black;
+}
+
+body.darkmode .direita-cabecalho h1 {
+    color: white;
+}
+
+body.darkmode .direita-inferior h1{
+
+    background-color: rgb(255, 255, 255);
+}
+
+body.darkmode .direita-meio .textoImage{
+
+    background-color: rgb(255, 255, 255);
+}
+
+body.darkmode .direita-total button{
+
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+>>>>>>> 87faa87a6059724ad55975293be5f339b07bdcce

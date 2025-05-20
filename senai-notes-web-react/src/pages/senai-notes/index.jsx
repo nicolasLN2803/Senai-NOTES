@@ -34,8 +34,41 @@ import ChevronRight from "../../assets/imgs/Chevron Right MD.svg"
 import Archive1 from "../../assets/imgs/Archive.svg"
 
 import Delete from "../../assets/imgs/delete.svg"
+import { useEffect, useState } from "react";
 
 function Notes() {
+
+    const [darkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+
+        let dark = localStorage.getItem("darkmode");
+
+        if (dark === "true") {
+            setDarkMode(true);
+            document.body.classList.add("darkmode");
+        }
+
+    }, []);
+
+    const ativarDesativarDarkMode = () => {
+
+        let darkModeAtualizado = !darkMode;
+        setDarkMode(darkModeAtualizado);
+
+        if (darkModeAtualizado == true) {
+
+            document.body.classList.add("darkmode");
+
+        } else {
+
+            document.body.classList.remove("darkmode")
+
+        }
+
+        localStorage.setItem("darkmode", darkModeAtualizado);
+
+    }
 
     return (
         <>
@@ -347,6 +380,10 @@ function Notes() {
                                 <button className="delete-notes" type="button">
                                     <img src={Delete} alt="" srcset="" />
                                     Delete Notes</button>
+
+                                    <button onClick={() => ativarDesativarDarkMode()} className="delete-notes" type="button">
+                                    <img src={Delete} alt="" srcset="" />
+                                    Dark mode</button>
 
                             </div>
 
