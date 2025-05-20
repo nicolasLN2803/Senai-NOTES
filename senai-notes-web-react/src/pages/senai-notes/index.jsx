@@ -152,6 +152,7 @@ function Notes() {
                                 </div>
                             </div>
 
+
                             <div className="botao">
                                 <button className="botoes" type="button">
                                     <img src={Rectangle3} alt="" srcset="" />
@@ -171,7 +172,6 @@ function Notes() {
                                     </div>
                                 </div>
                             </div>
-
 
                             <div className="botao">
                                 <button className="botoes" type="button">
@@ -232,7 +232,6 @@ function Notes() {
                                 </div>
                             </div>
 
-
                             <div className="botao">
                                 <button className="botoes" type="button">
                                     <img src={Reading} alt="" srcset="" />
@@ -281,43 +280,41 @@ function Notes() {
 
                         <div className="direita-meio">
 
-                            <div className="imagem-central">
-                            </div>
+                            <div className="imagem-central"> </div>
+
 
                             <div className="textoImage">
-                                <h1>React Performance Optimization</h1>
-
+                                <input className="texto-titulo" maxlength="20" placeholder="Insira um titulo" type="Search" />
 
                                 <div className="controle-tag">
 
                                     <div className="tag-meio">
-
                                         <img src={tag3} alt="" srcset="" />
                                         <p>Tags</p>
+                                        <input className="texto-editavel" maxlength="20" placeholder="Insira um titulo" type="Search" />
 
                                     </div>
-
-
-
                                 </div>
 
                                 <div className="controle-tag">
 
                                     <div className="tag-meio">
-
                                         <img src={Clock} alt="" srcset="" />
-                                        <p>Tags</p>
+                                        <p>Last Edited</p>
+                                        <input className="texto-editavel" maxlength="20" placeholder="Insira um titulo" type="Search" />
 
                                     </div>
-                                    <p>29 Oct 2024 </p>
-
                                 </div>
                             </div>
+
+
+
 
 
                             <div className="linha-meio">
 
-                                <h1>Anotações realizadas neste espaço</h1>
+                                <textarea className="text-control" maxlength="200" placeholder="Insira um titulo"
+                                ></textarea>
 
                             </div>
 
