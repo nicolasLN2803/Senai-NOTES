@@ -504,21 +504,63 @@ body.darkmode .direita-total {
     background-color: black;
 }
 
+body.darkmode main {
+
+    background-color: rgb(0, 0, 0);
+}
+
 body.darkmode .direita-cabecalho h1 {
     color: white;
 }
 
 body.darkmode .direita-inferior h1{
 
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    color: #F3F5F8;
 }
 
-body.darkmode .direita-meio .textoImage{
-
-    background-color: rgb(255, 255, 255);
-}
 
 body.darkmode .direita-total button{
 
     background-color: rgb(255, 255, 255);
+}
+
+body.darkmode .text-control{
+
+    background-color: black;
+}
+
+body.darkmode .texto-titulo{
+
+    background-color: black;
+}
+
+body.darkmode .texto-editavel{
+
+    background-color: black;
+}
+
+body.darkmode .caixa-esquerda .botoes-notes {
+
+    background-color: black;
+    color: #F3F5F8;
+}
+
+body.darkmode .direita-meio p{
+
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+body.darkmode .caixa-esquerda .botoes {
+
+    background-color: black;
+    color: #F3F5F8;
+}
+
+body.darkmode .archived-notes{
+
+
+    background-color: black;
+    color: black ;
 }
