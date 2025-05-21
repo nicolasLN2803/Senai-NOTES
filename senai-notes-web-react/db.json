@@ -1,126 +1,92 @@
 {
   "users": [
     {
+      "token": "agbjklo5624pifdrs",
       "id": "1",
-      "name": "Kaue",
-      "email": "kaue@gmail.com",
-      "password": "12345678"
+      "nome": "Rose",
+      "email": "rsianga@email.com",
+      "senha": "123456"
     },
     {
-      "id": "62b4",
-      "name": "Teste",
-      "email": "Teste@gmail.com",
-      "password": "12345678"
+      "token": "agbjklo5624pifdrs",
+      "id": "2",
+      "nome": "Teste",
+      "email": "teste@email.com",
+      "senha": "123456"
     },
     {
-      "id": "628f",
-      "email": "bolinhas123@gmail.com",
-      "password": "bolinhas123"
+      "id": "1a2f",
+      "email": "rsianga@email.com",
+      "senha": "123456"
     },
     {
-      "id": "59c5",
-      "email": "bolinhas123@gmail.com",
-      "password": "bolinhas123"
+      "id": "bb65",
+      "email": "rsianga@email.com",
+      "senha": "12345"
+    },
+    {
+      "id": "1a78",
+      "email": "rsianga@email.com",
+      "senha": "12345"
     }
   ],
-  "esquecerSenha": [
+  "tags": [
     {
-      "id": "1",
-      "name": "Kaue",
-      "email": "kaue@gmail.com",
-      "password": "12345678"
+      "name": "React",
+      "id": "7b8e"
     },
     {
-      "id": "62b4",
-      "name": "Teste",
-      "email": "Teste@gmail.com",
-      "password": "12345678"
+      "name": "Node",
+      "id": "c565"
     },
     {
-      "id": "628f",
-      "email": "bolinhas123@gmail.com",
-      "password": "bolinhas123"
+      "name": "JavaScript",
+      "id": "3338"
     },
     {
-      "id": "59c5",
-      "email": "bolinhas123@gmail.com",
-      "password": "bolinhas123"
+      "name": "CSS",
+      "id": "52fe"
+    },
+    {
+      "name": "HTML",
+      "id": "db30"
     }
   ],
-  "resetSenha": [
+  "notes": [
     {
-      "id": "1",
-      "name": "Kaue",
-      "email": "kaue@gmail.com",
-      "password": "12345678"
+      "id": "9999",
+      "userId": "1",
+      "title": "React Development",
+      "description": "Texto.",
+      "image": "assets/sample.png",
+      "tags": [
+        "React",
+        "Node"
+      ],
+      "date": "2025-05-19T19:53:40.182Z"
     },
     {
-      "id": "62b4",
-      "name": "Teste",
-      "email": "Teste@gmail.com",
-      "password": "12345678"
+      "id": "d7b9",
+      "userId": "1",
+      "title": "Node Development",
+      "description": "Texto 2.",
+      "image": "assets/sample.png",
+      "tags": [
+        "Node",
+        "    Teste"
+      ],
+      "date": "2025-05-19T18:44:08.198Z"
     },
     {
-      "id": "628f",
-      "email": "bolinhas123@gmail.com",
-      "password": "bolinhas123"
-    },
-    {
-      "id": "59c5",
-      "email": "bolinhas123@gmail.com",
-      "password": "bolinhas123"
-    },
-    {
-      "id": "a9ad",
-      "email": "bolinhas123@gmail.com"
-    },
-    {
-      "id": "d0f3",
-      "email": "bolinhas123@gmail.com"
-    },
-    {
-      "id": "dfb1",
-      "email": "bolinhas123@gmail.com"
-    },
-    {
-      "id": "74dd",
-      "email": "bolinhas123@gmail.com"
-    },
-    {
-      "id": "3eef",
-      "email": "bolinhas123@gmail.com"
-    },
-    {
-      "id": "4942",
-      "email": "bolinhas123@gmail.com"
-    },
-    {
-      "id": "2141",
-      "email": "bolinhas123@gmail.com"
-    },
-    {
-      "id": "daff",
-      "email": "bolinhas123@gmail.com"
-    },
-    {
-      "id": "3901",
-      "email": "bolinhas123@gmail.com"
-    },
-    {
-      "id": "72e2",
-      "email": "Nikolas15@gmail.com"
-    },
-    {
-      "id": "bc69",
-      "email": "danteRodrigo@hotmail.com"
+      "id": "af12",
+      "userId": "1",
+      "title": "JavaScript Development",
+      "description": "Texto",
+      "image": "assets/sample.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "date": "2025-05-19T16:57:26.196Z"
     }
-  ],
-  "anotacoes": [
-    {
-      "id":1,
-      "title": "Receita de lasanha",
-      "tags": ["Cooking", "Tomato"],
-      "description": "passo a passo"
-    },
   ]
 }

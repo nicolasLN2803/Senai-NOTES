@@ -38,9 +38,15 @@ import { useEffect, useState } from "react";
 
 function Notes() {
 
+
+    const [notes, setNotes] = useState([]);
+
+
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
+
+        getNotes();
 
         let dark = localStorage.getItem("darkmode");
 
@@ -52,23 +58,34 @@ function Notes() {
     }, []);
 
     const ativarDesativarDarkMode = () => {
-
         let darkModeAtualizado = !darkMode;
         setDarkMode(darkModeAtualizado);
-
         if (darkModeAtualizado == true) {
-
             document.body.classList.add("darkmode");
-
         } else {
-
             document.body.classList.remove("darkmode")
+        }
+        localStorage.setItem("darkmode", darkModeAtualizado);
+
+
+    }
+
+    const getNotes = async () => {
+        let response = await fetch("http://localhost:3000/notes")
+
+        if (response.ok) {
+
+
+            let json = await response.json();
+
+            setNotes(json);
 
         }
 
-        localStorage.setItem("darkmode", darkModeAtualizado);
+    };
 
-    }
+
+
 
     return (
         <>
@@ -162,150 +179,28 @@ function Notes() {
                         <div className="direita-inferior">
 
                             <div className="create-notes" >
-                                <button className="create-new" type="button"> + Create New Notes</button>
+                                <button className="create-new"> + Create New Notes</button>
                             </div>
 
-                            <div className="botao">
-                                <button className="botoes" type="button">
-                                    <img src={Rectangle} alt="" srcset="" />
-                                </button>
+                            {notes.map(note => (
+                                <div className="botao">
+                                    <button className="botoes" type="button">
+                                        <img src={Rectangle3} />
+                                    </button>
 
-                                <div>
-                                    <h1>React Performance Optimization</h1>
-                                    <div className="controle-tag">
-                                        <button className="botoes" type="button">
-                                            <img src={devdir} alt="" srcset="" />
-                                        </button>
+                                    <div>
+                                        <h1>{note.title}</h1>
+                                        <div className="controle-tag">
+                                            {note.tags.map(tag => (
+                                                <p className='botoes'>{tag}</p>
+                                            ))}
 
-                                        <button className="botoes" type="button">
-                                            <img src={reacttag} alt="" srcset="" />
-                                        </button>
-
+                                        </div>
                                     </div>
+
                                 </div>
-                            </div>
+                            ))}
 
-
-                            <div className="botao">
-                                <button className="botoes" type="button">
-                                    <img src={Rectangle3} alt="" srcset="" />
-                                </button>
-
-                                <div>
-                                    <h1>Japan Travel Planning</h1>
-                                    <div className="controle-tag">
-                                        <button className="botoes" type="button">
-                                            <img src={devdir} alt="" srcset="" />
-                                        </button>
-
-                                        <button className="botoes" type="button">
-                                            <img src={personatag} alt="" srcset="" />
-                                        </button>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="botao">
-                                <button className="botoes" type="button">
-                                    <img src={FavoritePasta} alt="" srcset="" />
-                                </button>
-                                <div>
-                                    <h1>Favorite Pasta Recipes</h1>
-                                    <div className="controle-tag">
-                                        <button className="botoes" type="button">
-                                            <img src={cooking1tag} alt="" srcset="" />
-                                        </button>
-
-                                        <button className="botoes" type="button">
-                                            <img src={cooking1tag} alt="" srcset="" />
-                                        </button>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="botao">
-                                <button className="botoes" type="button">
-                                    <img src={Weekly} alt="" srcset="" />
-                                </button>
-
-                                <div>
-                                    <h1>Weekly Workout Plan</h1>
-                                    <div className="controle-tag">
-                                        <button className="botoes" type="button">
-                                            <img src={devdir} alt="" srcset="" />
-                                        </button>
-
-                                        <button className="botoes" type="button">
-                                            <img src={reacttag} alt="" srcset="" />
-                                        </button>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="botao">
-                                <button className="botoes" type="button">
-                                    <img src={Meal} alt="" srcset="" />
-                                </button>
-
-                                <div>
-                                    <h1>Meal Prep Ideas</h1>
-                                    <div className="controle-tag">
-                                        <button className="botoes" type="button">
-                                            <img src={devdir} alt="" srcset="" />
-                                        </button>
-
-                                        <button className="botoes" type="button">
-                                            <img src={reacttag} alt="" srcset="" />
-                                        </button>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="botao">
-                                <button className="botoes" type="button">
-                                    <img src={Reading} alt="" srcset="" />
-                                </button>
-
-                                <div>
-                                    <h1>Reading List</h1>
-                                    <div className="controle-tag">
-                                        <button className="botoes" type="button">
-                                            <img src={devdir} alt="" srcset="" />
-                                        </button>
-
-                                        <button className="botoes" type="button">
-                                            <img src={reacttag} alt="" srcset="" />
-                                        </button>
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div className="botao">
-                                <button className="botoes" type="button">
-                                    <img src={Reading} alt="" srcset="" />
-                                </button>
-
-                                <div>
-                                    <h1>Reading List</h1>
-                                    <div className="controle-tag">
-                                        <button className="botoes" type="button">
-                                            <img src={devdir} alt="" srcset="" />
-                                        </button>
-
-                                        <button className="botoes" type="button">
-                                            <img src={reacttag} alt="" srcset="" />
-                                        </button>
-
-                                    </div>
-                                </div>
-
-                            </div>
 
 
                         </div>
@@ -378,7 +273,7 @@ function Notes() {
                                     <img src={Delete} alt="" srcset="" />
                                     Delete Notes</button>
 
-                                    <button onClick={() => ativarDesativarDarkMode()} className="delete-notes" type="button">
+                                <button onClick={() => ativarDesativarDarkMode()} className="delete-notes" type="button">
                                     <img src={Delete} alt="" srcset="" />
                                     Dark mode</button>
 
