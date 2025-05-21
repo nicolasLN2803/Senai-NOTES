@@ -24,6 +24,12 @@
 
 }
 
+.botoes-notes:hover{
+
+transform: scale(1.05);
+    
+}
+
 
 .botoes-notes img {
 
@@ -142,7 +148,7 @@ font-weight: bold;
 
     border: none;
     background-color: #335CFF;
-    width: 342px;
+    width: 430px;
     height: 41px;
     border-radius: 10px;
     margin-top: 10px;
@@ -153,11 +159,18 @@ font-weight: bold;
 
 }
 
-button:hover {
+.botoes:hover {
 
-    transform: scale(1.2);
+    transform: scale(1.05);
 
 }
+
+.create-new:hover {
+
+    transform: scale(1.05);
+
+}
+
 
 .botao {
     display: flex;
@@ -342,7 +355,7 @@ button:hover {
 .direita-total {
 
     height: 100%;
-    width: 25%;
+    width: 10%;
 
 }
 .archived-notes {
@@ -442,10 +455,18 @@ body.darkmode .direita-cabecalho {
 .text-control {
 
 
-    width: 100%;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+
+    width: 90%;
     height: 100%;
     resize: none;
     border: none;
+
+    font-family: "Inter";
+    font-size: 15px;
 
 }
 
@@ -470,7 +491,7 @@ margin-right: 100px;
 
 display: flex;
 font-size: 15px;
-font-size: 15px;
+font-family: "Inter";
 font-weight: bold;
 margin-bottom: 10px;
 
@@ -523,7 +544,10 @@ body.darkmode .direita-total button{
     background-color: rgb(255, 255, 255);
 }
 
+.archived:hover{
 
-
+    transform: scale(1.05);
+  
+}
 
 

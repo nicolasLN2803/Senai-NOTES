@@ -30,6 +30,7 @@ import tag3 from "../../assets/imgs/Tag (3).svg"
 import Clock from "../../assets/imgs/Circle Clock.svg"
 import ChevronRight from "../../assets/imgs/Chevron Right MD.svg"
 import Archive1 from "../../assets/imgs/Archive.svg"
+import DarkMode from "../../assets/imgs/DARKMODE.svg"
 
 import Delete from "../../assets/imgs/delete.svg"
 import { useEffect, useState } from "react";
@@ -315,14 +316,14 @@ function Notes() {
 
 
                             <div className="textoImage">
-                                <input className="texto-titulo" maxlength="20" placeholder="Insira um titulo" type="Search" />
+                                <input className="texto-titulo" maxlength="20" placeholder="Insert your title" type="Search" />
 
                                 <div className="controle-tag">
 
                                     <div className="tag-meio">
                                         <img src={tag3} alt="" srcset="" />
                                         <p>Tags</p>
-                                        <input className="texto-editavel" maxlength="20" placeholder="Insira um titulo" type="Search" />
+                                        <input className="texto-editavel" maxlength="20" placeholder="Insert the Tag name" type="Search" />
 
                                     </div>
                                 </div>
@@ -332,7 +333,7 @@ function Notes() {
                                     <div className="tag-meio">
                                         <img src={Clock} alt="" srcset="" />
                                         <p>Last Edited</p>
-                                        <input className="texto-editavel" maxlength="20" placeholder="Insira um titulo" type="Search" />
+                                        <input className="texto-editavel" maxlength="20" placeholder="Date of the edition" type="Search" />
 
                                     </div>
                                 </div>
@@ -344,7 +345,7 @@ function Notes() {
 
                             <div className="linha-meio">
 
-                                <textarea className="text-control" maxlength="200" placeholder="Insira um titulo"
+                                <textarea className="text-control" maxlength="200" placeholder="Insert your notes"
                                 ></textarea>
 
                             </div>
@@ -377,7 +378,7 @@ function Notes() {
                                     Delete Notes</button>
 
                                 <button onClick={() => ativarDesativarDarkMode()} className="delete-notes" type="button">
-                                    <img src={Delete} alt="" srcset="" />
+                                    <img src={DarkMode} alt="" srcset="" />
                                     Dark mode</button>
 
                             </div>
