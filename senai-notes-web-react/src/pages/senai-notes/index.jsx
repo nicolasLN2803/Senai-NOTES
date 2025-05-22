@@ -35,7 +35,7 @@ import logosenainotes from "../../imgs/logosenainotes.svg"
 // import Archived2 from "../../imgs/Archive.svg"
 
 
-import Delete from "../../assets/imgs/delete.svg"
+// import Delete from "../../assets/imgs/delete.svg"
 import { useEffect, useState } from "react";
 import { Form } from "react-router-dom";
 
