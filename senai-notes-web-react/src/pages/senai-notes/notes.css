@@ -355,7 +355,13 @@ font-weight: bold;
 .direita-total {
 
     height: 100%;
-    width: 10%;
+    width: 22%
+
+}
+
+.direita-total button:hover{
+
+transform: scale(1.05);
 
 }
 .archived-notes {
@@ -546,7 +552,6 @@ body.darkmode .direita-total button{
     background-color: rgb(255, 255, 255);
 }
 
-<<<<<<< HEAD
 .archived:hover{
 
     transform: scale(1.05);
@@ -554,7 +559,6 @@ body.darkmode .direita-total button{
 }
 
 
-=======
 body.darkmode .text-control{
 
     background-color: black;
@@ -594,4 +598,3 @@ body.darkmode .archived-notes{
     background-color: black;
     color: black ;
 }
->>>>>>> 2bf7762fc1bb3154b2e3ec31d73fe7c61796e291

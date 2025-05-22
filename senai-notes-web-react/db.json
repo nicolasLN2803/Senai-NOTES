@@ -87,17 +87,36 @@
         "JavaScript"
       ],
       "date": "2025-05-19T16:57:26.196Z"
-    }
-<<<<<<< HEAD
-  ],
-  "anotacoes": [
+    },
     {
-      "id":1,
-      "title": "Receita de lasanha",
-      "tags": ["Cooking", "Tomato"],
-      "description": "passo a passo"
+      "id": "e434",
+      "chatTitle": "genio",
+      "userId": "meuId",
+      "messages": []
+    },
+    {
+      "id": "0c2d",
+      "chatTitle": "gg",
+      "userId": "meuId",
+      "messages": []
+    },
+    {
+      "id": "435c",
+      "chatTitle": "Yuri",
+      "userId": "meuId",
+      "messages": []
+    },
+    {
+      "id": "43c1",
+      "chatTitle": "ariel",
+      "userId": "meuId",
+      "messages": []
+    },
+    {
+      "id": "821f",
+      "title": "DIEGO",
+      "userId": "meuId",
+      "messages": []
     }
-=======
->>>>>>> 2bf7762fc1bb3154b2e3ec31d73fe7c61796e291
   ]
 }

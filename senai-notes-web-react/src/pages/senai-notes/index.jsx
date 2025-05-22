@@ -22,21 +22,18 @@ import Weekly from "../../assets/imgs/Weekly.svg"
 import Meal from "../../assets/imgs/Meal.svg"
 import Reading from "../../assets/imgs/Reading.svg"
 import FitnessDir from "../../assets/imgs/Fitness.svg"
-import devdir from "../../assets/imgs/tag.svg"
-import reacttag from "../../assets/imgs/reacttag.svg"
-import personatag from "../../assets/imgs/personatag.svg"
-import cooking1tag from "../../assets/imgs/cooking1.svg"
+// import devdir from "../../assets/imgs/tag.svg"
+// import reacttag from "../../assets/imgs/reacttag.svg"
+// import personatag from "../../assets/imgs/personatag.svg"
+// import cooking1tag from "../../assets/imgs/cooking1.svg"
 import tag3 from "../../assets/imgs/Tag (3).svg"
 import Clock from "../../assets/imgs/Circle Clock.svg"
 import ChevronRight from "../../assets/imgs/Chevron Right MD.svg"
 import Archive1 from "../../assets/imgs/Archive.svg"
-<<<<<<< HEAD
 import DarkMode from "../../assets/imgs/DARKMODE.svg"
-=======
 import logosenainotes from "../../imgs/logosenainotes.svg"
 import Archived2 from "../../imgs/Archive.svg"
 
->>>>>>> 2bf7762fc1bb3154b2e3ec31d73fe7c61796e291
 
 import Delete from "../../assets/imgs/delete.svg"
 import { useEffect, useState } from "react";
@@ -46,6 +43,7 @@ function Notes() {
 
 
     const [notes, setNotes] = useState([]);
+    const [noteSelecionado, setNoteSelecionado] = useState(null);
 
 
     const [darkMode, setDarkMode] = useState(false);
@@ -90,6 +88,114 @@ function Notes() {
 
     };
 
+    const clickNote = (note) => {
+
+        setNoteSelecionado(note);
+        // setIsLeftPanelOpen(false);
+        console.log(note);
+
+    }
+
+   
+    const novaNote = async () => {
+
+
+        let novoTitulo = prompt("Insert a title: ");
+
+
+
+        if (novoTitulo == null) {
+
+            alert("Insert a title:");
+            return; // faz o código parar de ser executado.
+
+        }
+
+        let userId = localStorage.getItem("meuId");
+
+        let nNote = {
+
+            title: novoTitulo,
+            id: crypto.randomUUID,
+            userId: userId,
+            messages: []
+
+        }
+
+        const response = await fetch("http://localhost:3000/notes", {
+
+            method: "POST",
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("meuToken"),
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(
+                nNote
+            )
+
+        });
+
+        if (response.ok) {
+
+            //Atualiza os chats da tela
+            await getNotes();
+            setNoteSelecionado(nNote)
+
+        }
+
+    };
+
+    const AtualizarNote = async () => {
+
+        if(!noteSelecionado) {
+
+            alert("No notes to update");
+            return;
+
+        }
+
+        let novoTitulo = prompt("Update your  title: ");
+
+        if (novoTitulo == null) {
+
+            alert("Insert a title:");
+            return; // faz o código parar de ser executado.
+
+        }
+
+        let attNote = {
+
+           ...noteSelecionado,
+           title: novoTitulo
+
+        };
+
+        const response = await fetch("http://localhost:3000/notes", {
+
+            method: "PUT",
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("meuToken"),
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(
+                attNote
+            )
+
+        });
+
+        if (response.ok) {
+
+            //Atualiza os chats da tela
+            await getNotes();
+            setNoteSelecionado(attNote)
+
+        } else {
+
+            alert("Error updating the note.")
+        }
+
+    };
+        
 
 
 
@@ -187,19 +293,19 @@ function Notes() {
                         <div className="direita-inferior">
 
                             <div className="create-notes" >
-                                <button className="create-new"> + Create New Notes</button>
+                                <button className="create-new" onClick={() => novaNote()}> + Create New Notes</button>
                             </div>
 
                             {notes.map(note => (
                                 <div className="botao">
-                                    <button className="botoes" type="button">
+                                    <button className="botoes" onClick={() => clickNote(note)}>
                                         <img src={Rectangle3} />
                                     </button>
 
                                     <div>
                                         <h1>{note.title}</h1>
                                         <div className="controle-tag">
-                                            {note.tags.map(tag => (
+                                            {note.tags?.map(tag => (
                                                 <p className='botoes'>{tag}</p>
                                             ))}
 
@@ -220,7 +326,7 @@ function Notes() {
 
 
                             <div className="textoImage">
-                                <input className="texto-titulo" maxlength="20" placeholder="Insert your title" type="Search" />
+                                <input value={noteSelecionado?.title} onChange={event => setNoteSelecionado({ ...noteSelecionado, title: event.target.value })} className="texto-titulo" maxlength="20" placeholder="Insert your title" type="Search" />
 
                                 <div className="controle-tag">
 
@@ -237,7 +343,7 @@ function Notes() {
                                     <div className="tag-meio">
                                         <img src={Clock} alt="" srcset="" />
                                         <p>Last Edited</p>
-                                        <input className="texto-editavel" maxlength="20" placeholder="Date of the edition" type="Search" />
+                                        <input  className="texto-editavel" maxlength="20" placeholder="Date of the edition" type="Search" />
 
                                     </div>
                                 </div>
@@ -259,7 +365,7 @@ function Notes() {
                                 <div className="botao-inferior">
                                     <button className="save-note" type="button"> + Save Notes</button>
 
-                                    <button className="cancel" typen="button">  Cancel
+                                    <button className="cancel" type="button">  Cancel
                                     </button>
 
 
