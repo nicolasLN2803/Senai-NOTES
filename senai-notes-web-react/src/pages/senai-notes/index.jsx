@@ -32,7 +32,7 @@ import ChevronRight from "../../assets/imgs/Chevron Right MD.svg"
 import Archive1 from "../../assets/imgs/Archive.svg"
 import DarkMode from "../../assets/imgs/DARKMODE.svg"
 import logosenainotes from "../../imgs/logosenainotes.svg"
-import Archived2 from "../../imgs/Archive.svg"
+// import Archived2 from "../../imgs/Archive.svg"
 
 
 import Delete from "../../assets/imgs/delete.svg"

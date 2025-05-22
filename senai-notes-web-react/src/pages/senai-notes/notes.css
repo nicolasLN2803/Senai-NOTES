@@ -562,16 +562,19 @@ body.darkmode .direita-total button{
 body.darkmode .text-control{
 
     background-color: black;
+    color: #E0E4EA;
 }
 
 body.darkmode .texto-titulo{
 
     background-color: black;
+    color: #E0E4EA;
 }
 
 body.darkmode .texto-editavel{
 
     background-color: black;
+    color: #E0E4EA;
 }
 
 body.darkmode .caixa-esquerda .botoes-notes {
@@ -595,6 +598,27 @@ body.darkmode .caixa-esquerda .botoes {
 body.darkmode .archived-notes{
 
 
-    background-color: black;
-    color: black ;
+ background: #000000 !important;
+ border: none;
+color: #F3F5F8;
+    
 }
+<<<<<<< HEAD
+=======
+
+
+body.darkmode .input{
+
+  
+    color: rgb(255, 255, 255);
+}
+
+body.darkmode .delete-notes{
+
+background: #000000 !important;
+border: none;
+color: #F3F5F8;
+ 
+
+}
+>>>>>>> dd1df5c2f1e5b63f7f6e89a3c23dc6137ffe24ad
