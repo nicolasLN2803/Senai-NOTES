@@ -15,13 +15,13 @@ import TaypeScrit from "../../assets/imgs/Cooking.svg"
 import Engrenage from "../../assets/imgs/Setting.svg"
 import Topba from "../../assets/imgs/Topbar Item.svg"
 import Search from "../../assets/imgs/Search.svg"
-import Rectangle from "../../assets/imgs/Rectangle 45.svg"
+// import Rectangle from "../../assets/imgs/Rectangle 45.svg"
 import Rectangle3 from "../../assets/imgs/Rectangle3.svg"
-import FavoritePasta from "../../assets/imgs/FavoritePasta.svg"
-import Weekly from "../../assets/imgs/Weekly.svg"
-import Meal from "../../assets/imgs/Meal.svg"
-import Reading from "../../assets/imgs/Reading.svg"
-import FitnessDir from "../../assets/imgs/Fitness.svg"
+// import FavoritePasta from "../../assets/imgs/FavoritePasta.svg"
+// import Weekly from "../../assets/imgs/Weekly.svg"
+// import Meal from "../../assets/imgs/Meal.svg"
+// import Reading from "../../assets/imgs/Reading.svg"
+// import FitnessDir from "../../assets/imgs/Fitness.svg"
 // import devdir from "../../assets/imgs/tag.svg"
 // import reacttag from "../../assets/imgs/reacttag.svg"
 // import personatag from "../../assets/imgs/personatag.svg"
@@ -166,11 +166,12 @@ function Notes() {
         let attNote = {
 
            ...noteSelecionado,
-           title: novoTitulo
+           title: novoTitulo,
+           messages: [],
 
         };
 
-        const response = await fetch("http://localhost:3000/notes", {
+        const response = await fetch("http://localhost:3000/notes/" + noteSelecionado.id, {
 
             method: "PUT",
             headers: {
@@ -333,7 +334,7 @@ function Notes() {
                                     <div className="tag-meio">
                                         <img src={tag3} alt="" srcset="" />
                                         <p>Tags</p>
-                                        <input className="texto-editavel" maxlength="20" placeholder="Insert the Tag name" type="Search" />
+                                        <input className="texto-editavel"  value={noteSelecionado?.title} onChange={event => setNoteSelecionado({ ...noteSelecionado, title: event.target.value })} maxlength="20" placeholder="Insert the Tag name" type="Search" />
 
                                     </div>
                                 </div>
@@ -363,7 +364,7 @@ function Notes() {
                             <div className="controle-botao">
 
                                 <div className="botao-inferior">
-                                    <button className="save-note" type="button"> + Save Notes</button>
+                                    <button className="save-note" onClick={() => AtualizarNote()}>+ Save Notes</button>
 
                                     <button className="cancel" type="button">  Cancel
                                     </button>
