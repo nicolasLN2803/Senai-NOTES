@@ -546,7 +546,6 @@ body.darkmode .direita-total button{
     background-color: rgb(255, 255, 255);
 }
 
-<<<<<<< HEAD
 .archived:hover{
 
     transform: scale(1.05);
@@ -554,20 +553,22 @@ body.darkmode .direita-total button{
 }
 
 
-=======
 body.darkmode .text-control{
 
     background-color: black;
+    color: #E0E4EA;
 }
 
 body.darkmode .texto-titulo{
 
     background-color: black;
+    color: #E0E4EA;
 }
 
 body.darkmode .texto-editavel{
 
     background-color: black;
+    color: #E0E4EA;
 }
 
 body.darkmode .caixa-esquerda .botoes-notes {
@@ -591,7 +592,24 @@ body.darkmode .caixa-esquerda .botoes {
 body.darkmode .archived-notes{
 
 
-    background-color: black;
-    color: black ;
+ background: #000000 !important;
+ border: none;
+color: #F3F5F8;
+    
 }
->>>>>>> 2bf7762fc1bb3154b2e3ec31d73fe7c61796e291
+
+
+body.darkmode .input{
+
+  
+    color: rgb(255, 255, 255);
+}
+
+body.darkmode .delete-notes{
+
+background: #000000 !important;
+border: none;
+color: #F3F5F8;
+ 
+
+}

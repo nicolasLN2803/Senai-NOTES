@@ -22,21 +22,18 @@ import Weekly from "../../assets/imgs/Weekly.svg"
 import Meal from "../../assets/imgs/Meal.svg"
 import Reading from "../../assets/imgs/Reading.svg"
 import FitnessDir from "../../assets/imgs/Fitness.svg"
-import devdir from "../../assets/imgs/tag.svg"
-import reacttag from "../../assets/imgs/reacttag.svg"
-import personatag from "../../assets/imgs/personatag.svg"
-import cooking1tag from "../../assets/imgs/cooking1.svg"
+// import devdir from "../../assets/imgs/tag.svg"
+// import reacttag from "../../assets/imgs/reacttag.svg"
+// import personatag from "../../assets/imgs/personatag.svg"
+// import cooking1tag from "../../assets/imgs/cooking1.svg"
 import tag3 from "../../assets/imgs/Tag (3).svg"
 import Clock from "../../assets/imgs/Circle Clock.svg"
 import ChevronRight from "../../assets/imgs/Chevron Right MD.svg"
 import Archive1 from "../../assets/imgs/Archive.svg"
-<<<<<<< HEAD
 import DarkMode from "../../assets/imgs/DARKMODE.svg"
-=======
 import logosenainotes from "../../imgs/logosenainotes.svg"
-import Archived2 from "../../imgs/Archive.svg"
+// import Archived2 from "../../imgs/Archive.svg"
 
->>>>>>> 2bf7762fc1bb3154b2e3ec31d73fe7c61796e291
 
 import Delete from "../../assets/imgs/delete.svg"
 import { useEffect, useState } from "react";
