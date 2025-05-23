@@ -15,13 +15,13 @@ import TaypeScrit from "../../assets/imgs/Cooking.svg"
 import Engrenage from "../../assets/imgs/Setting.svg"
 import Topba from "../../assets/imgs/Topbar Item.svg"
 import Search from "../../assets/imgs/Search.svg"
-import Rectangle from "../../assets/imgs/Rectangle 45.svg"
+// import Rectangle from "../../assets/imgs/Rectangle 45.svg"
 import Rectangle3 from "../../assets/imgs/Rectangle3.svg"
-import FavoritePasta from "../../assets/imgs/FavoritePasta.svg"
-import Weekly from "../../assets/imgs/Weekly.svg"
-import Meal from "../../assets/imgs/Meal.svg"
-import Reading from "../../assets/imgs/Reading.svg"
-import FitnessDir from "../../assets/imgs/Fitness.svg"
+// import FavoritePasta from "../../assets/imgs/FavoritePasta.svg"
+// import Weekly from "../../assets/imgs/Weekly.svg"
+// import Meal from "../../assets/imgs/Meal.svg"
+// import Reading from "../../assets/imgs/Reading.svg"
+// import FitnessDir from "../../assets/imgs/Fitness.svg"
 // import devdir from "../../assets/imgs/tag.svg"
 // import reacttag from "../../assets/imgs/reacttag.svg"
 // import personatag from "../../assets/imgs/personatag.svg"
@@ -33,8 +33,6 @@ import Archive1 from "../../assets/imgs/Archive.svg"
 import DarkMode from "../../assets/imgs/DARKMODE.svg"
 import logosenainotes from "../../imgs/logosenainotes.svg"
 // import Archived2 from "../../imgs/Archive.svg"
-
-
 import Delete from "../../assets/imgs/delete.svg"
 import { useEffect, useState } from "react";
 import { Form } from "react-router-dom";
@@ -116,7 +114,7 @@ function Notes() {
         let nNote = {
 
             title: novoTitulo,
-            id: crypto.randomUUID,
+            id: crypto.randomUUID(),
             userId: userId,
             messages: []
 
@@ -146,54 +144,36 @@ function Notes() {
     };
 
     const AtualizarNote = async () => {
-
-        if(!noteSelecionado) {
-
+        if (!noteSelecionado) {
             alert("No notes to update");
             return;
-
         }
-
-        let novoTitulo = prompt("Update your  title: ");
-
-        if (novoTitulo == null) {
-
-            alert("Insert a title:");
-            return; // faz o código parar de ser executado.
-
-        }
-
-        let attNote = {
-
-           ...noteSelecionado,
-           title: novoTitulo
-
+    
+        const attNote = {
+            id: noteSelecionado.id,
+            title: noteSelecionado.title,
+            description: noteSelecionado.description, 
+            userId: noteSelecionado.userId,           
         };
-
-        const response = await fetch("http://localhost:3000/notes", {
-
+    
+        const response = await fetch(`http://localhost:3000/notes/${noteSelecionado.id}`, {
             method: "PUT",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("meuToken"),
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(
-                attNote
-            )
-
+            body: JSON.stringify(attNote)
         });
-
+    
         if (response.ok) {
-
-            //Atualiza os chats da tela
             await getNotes();
-            setNoteSelecionado(attNote)
-
+            setNoteSelecionado(attNote);  // Atualiza visualmente a nota
+            alert("Nota atualizada com sucesso!");
         } else {
-
-            alert("Error updating the note.")
+            const erro = await response.text();
+            console.error("Erro ao salvar:", erro);
+            alert("Erro ao salvar nota.");
         }
-
     };
         
 
@@ -326,14 +306,14 @@ function Notes() {
 
 
                             <div className="textoImage">
-                                <input value={noteSelecionado?.title} onChange={event => setNoteSelecionado({ ...noteSelecionado, title: event.target.value })} className="texto-titulo" maxlength="20" placeholder="Insert your title" type="Search" />
+                                <input value={noteSelecionado?.title} onChange={event => setNoteSelecionado({...noteSelecionado, title: event.target.value})} className="texto-titulo" maxlength="20" placeholder="Insert your title" type="Search" />
 
                                 <div className="controle-tag">
 
                                     <div className="tag-meio">
                                         <img src={tag3} alt="" srcset="" />
                                         <p>Tags</p>
-                                        <input className="texto-editavel" maxlength="20" placeholder="Insert the Tag name" type="Search" />
+                                        <input className="texto-editavel"  value={noteSelecionado?.description} onChange={event => setNoteSelecionado({...noteSelecionado, description: event.target.value})} maxlength="20" placeholder="Insert the Tag name" type="Search" />
 
                                     </div>
                                 </div>
@@ -355,15 +335,19 @@ function Notes() {
 
                             <div className="linha-meio">
 
-                                <textarea className="text-control" maxlength="200" placeholder="Insert your notes"
-                                ></textarea>
+                                <textarea className="text-control" 
+                                maxlength="200" 
+                                placeholder="Insert your notes"
+                                value={noteSelecionado?.description || ""}
+                                onChange={(e) =>
+                                  setNoteSelecionado({ ...noteSelecionado, description: e.target.value })}></textarea>
 
                             </div>
 
                             <div className="controle-botao">
 
                                 <div className="botao-inferior">
-                                    <button className="save-note" type="button"> + Save Notes</button>
+                                    <button className="save-note" onClick={() => AtualizarNote()}>+ Save Notes</button>
 
                                     <button className="cancel" type="button">  Cancel
                                     </button>
