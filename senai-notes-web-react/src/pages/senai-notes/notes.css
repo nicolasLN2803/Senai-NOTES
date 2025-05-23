@@ -603,8 +603,6 @@ body.darkmode .archived-notes{
 color: #F3F5F8;
     
 }
-<<<<<<< HEAD
-=======
 
 
 body.darkmode .input{
@@ -621,4 +619,15 @@ color: #F3F5F8;
  
 
 }
->>>>>>> dd1df5c2f1e5b63f7f6e89a3c23dc6137ffe24ad
+
+body.darkmode .tela-principal{
+
+  background-color: rgb(0, 0, 0);
+
+}
+
+body.darkmode{
+
+background-color: #000000;
+
+}
