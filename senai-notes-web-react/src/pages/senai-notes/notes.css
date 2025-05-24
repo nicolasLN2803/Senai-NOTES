@@ -438,6 +438,7 @@ transform: scale(1.05);
 
 width: 30%;
 height: 100%;
+overflow-y: auto;
 
 }
 
@@ -452,6 +453,12 @@ height: 100%;
 }
     
 body.darkmode .direita-cabecalho {
+
+    background-color: black;
+
+}
+
+body.darkmode {
 
     background-color: black;
 

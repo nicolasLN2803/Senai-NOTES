@@ -39,10 +39,8 @@ import { Form } from "react-router-dom";
 
 function Notes() {
 
-
     const [notes, setNotes] = useState([]);
     const [noteSelecionado, setNoteSelecionado] = useState(null);
-
 
     const [darkMode, setDarkMode] = useState(false);
 
@@ -94,13 +92,10 @@ function Notes() {
 
     }
 
-   
+
     const novaNote = async () => {
 
-
         let novoTitulo = prompt("Insert a title: ");
-
-
 
         if (novoTitulo == null) {
 
@@ -148,14 +143,15 @@ function Notes() {
             alert("No notes to update");
             return;
         }
-    
+
         const attNote = {
             id: noteSelecionado.id,
             title: noteSelecionado.title,
-            description: noteSelecionado.description, 
-            userId: noteSelecionado.userId,           
+            description: noteSelecionado.description,
+            userId: noteSelecionado.userId,
+            tags: noteSelecionado.tags
         };
-    
+
         const response = await fetch(`http://localhost:3000/notes/${noteSelecionado.id}`, {
             method: "PUT",
             headers: {
@@ -164,7 +160,7 @@ function Notes() {
             },
             body: JSON.stringify(attNote)
         });
-    
+
         if (response.ok) {
             await getNotes();
             setNoteSelecionado(attNote);  // Atualiza visualmente a nota
@@ -175,9 +171,6 @@ function Notes() {
             alert("Erro ao salvar nota.");
         }
     };
-        
-
-
 
     return (
         <>
@@ -186,12 +179,12 @@ function Notes() {
                 <header className="caixa-esquerda">
 
                     <button className="botoes" type="button">
-                        <img src={darkMode == true? logosenainotes : SenaiNotes} alt="" srcset="" />
+                        <img src={darkMode == true ? logosenainotes : SenaiNotes} alt="" srcset="" />
 
 
                     </button>
 
-            
+
 
                     <button className="botoes-notes" type="button">
                         <img src={AlNotes} alt="" srcset="" />
@@ -306,14 +299,14 @@ function Notes() {
 
 
                             <div className="textoImage">
-                                <input value={noteSelecionado?.title} onChange={event => setNoteSelecionado({...noteSelecionado, title: event.target.value})} className="texto-titulo" maxlength="20" placeholder="Insert your title" type="Search" />
+                                <input value={noteSelecionado?.title} onChange={event => setNoteSelecionado({ ...noteSelecionado, title: event.target.value })} className="texto-titulo" maxlength="20" placeholder="Insert your title" type="Search" />
 
                                 <div className="controle-tag">
 
                                     <div className="tag-meio">
                                         <img src={tag3} alt="" srcset="" />
                                         <p>Tags</p>
-                                        <input className="texto-editavel"  value={noteSelecionado?.description} onChange={event => setNoteSelecionado({...noteSelecionado, description: event.target.value})} maxlength="20" placeholder="Insert the Tag name" type="Search" />
+                                        <input className="texto-editavel" value={noteSelecionado?.tags} onChange={event => setNoteSelecionado({ ...noteSelecionado, tags: event.target.value })} maxlength="20" placeholder="Insert the Tag name" type="Search" />
 
                                     </div>
                                 </div>
@@ -323,26 +316,32 @@ function Notes() {
                                     <div className="tag-meio">
                                         <img src={Clock} alt="" srcset="" />
                                         <p>Last Edited</p>
-                                        <input  className="texto-editavel" maxlength="20" placeholder="Date of the edition" type="Search" />
+                                        <input className="texto-editavel" value={noteSelecionado?.date} onChange={event => setNoteSelecionado({ ...noteSelecionado, date: event.target.value })} maxlength="20" placeholder="Insert the Tag name" type="Search" />
 
                                     </div>
                                 </div>
                             </div>
 
 
-
+                            {/* <input className="texto-editavel" value={noteSelecionado?.tags} onChange={event => setNoteSelecionado({ ...noteSelecionado, tags: event.target.value })} maxlength="20" placeholder="Insert the Tag name" type="Search" /> */}
 
 
                             <div className="linha-meio">
 
-                                <textarea className="text-control" 
-                                maxlength="200" 
-                                placeholder="Insert your notes"
-                                value={noteSelecionado?.description || ""}
-                                onChange={(e) =>
-                                  setNoteSelecionado({ ...noteSelecionado, description: e.target.value })}></textarea>
+                                <textarea className="text-control"
+                                    value={noteSelecionado?.description} onChange={event => setNoteSelecionado({ ...noteSelecionado, description: event.target.value })}
+
+                                    maxlength="200"
+                                    placeholder="Insert your notes"
+                                ></textarea>
 
                             </div>
+
+
+
+
+
+
 
                             <div className="controle-botao">
 
