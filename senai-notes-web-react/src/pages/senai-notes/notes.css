@@ -345,7 +345,7 @@ font-weight: bold;
 
 .controle-botao {
 
-    margin-top: 20px;
+    margin-top: 50px;
     height: 7vh;
     width: 50vw;
 
@@ -461,7 +461,7 @@ body.darkmode .direita-cabecalho {
 .text-control {
 
 
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 10px;
     margin-right: 100px;
     margin-bottom: 20px;
