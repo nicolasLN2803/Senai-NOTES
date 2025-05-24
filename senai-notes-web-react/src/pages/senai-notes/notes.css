@@ -626,3 +626,15 @@ color: #F3F5F8;
  
 
 }
+
+body.darkmode .tela-principal{
+
+  background-color: rgb(0, 0, 0);
+
+}
+
+body.darkmode{
+
+background-color: #000000;
+
+}
