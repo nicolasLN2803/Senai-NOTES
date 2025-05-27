@@ -44,6 +44,9 @@ function Notes() {
 
     const [darkMode, setDarkMode] = useState(false);
 
+    const [image, setImage] = useState(null);
+    const [imageURL, setImageURL] = useState(null);
+
     useEffect(() => {
 
         getNotes();
@@ -149,7 +152,8 @@ function Notes() {
             title: noteSelecionado.title,
             description: noteSelecionado.description,
             userId: noteSelecionado.userId,
-            tags: noteSelecionado.tags
+            tags: noteSelecionado.tags,
+            date: new Date().toISOString()
         };
 
         const response = await fetch(`http://localhost:3000/notes/${noteSelecionado.id}`, {
@@ -171,6 +175,67 @@ function Notes() {
             alert("Erro ao salvar nota.");
         }
     };
+
+    const aoAdicionarImagem = (event) => {
+
+        const arquivo = event.target.files[0];
+
+        console.log("arquivo", arquivo);
+
+        setImage(arquivo);
+        setImageURL(URL.createObjectURL(arquivo));
+
+    }
+
+    const deletarNote = async () => {
+        if (!noteSelecionado) {
+          alert("Select a note to delete.");
+          return;
+        }   
+      
+        const confirmar = window.confirm(`Do you really want to delete the note "${noteSelecionado.title}"?`);
+      
+        if (!confirmar) return;
+      
+        const response = await fetch(`http://localhost:3000/notes/${noteSelecionado.id}`, {
+          method: "DELETE",
+          headers: {
+            "Authorization": "Bearer " + localStorage.getItem("meuToken"),
+          }
+        });
+      
+        if (response.ok) {
+          // Remove a nota da lista local
+          setNotes(prevNotes => prevNotes.filter(note => note.id !== noteSelecionado.id));
+          // Limpa a nota selecionada
+          setNoteSelecionado(null);
+          alert("Note deleted successfully!");
+        } else {
+          alert("Error deleting note.");
+        }
+      };
+      
+    //   const onSaveNoteImg = async () => {
+    
+    //     let formData = new FormData();
+    
+    //     formData.append("titulo", title);
+    //     formData.append("description", description);
+    //     formData.append("tags", tags);
+    //     formData.append("image", image);
+    
+    //     const response = await fetch(`http://localhost:3000/notes/${notaSelecionada.id}`, {
+    //       method: "PUT",
+    //       headers: {},
+    //       body: formData
+    //     });
+    
+    //     if (response.ok) {
+    //       alert("Sucesso!");
+    //     } else {
+    //       alert("Erro!");
+    //     }
+    //   }
 
     return (
         <>
@@ -254,7 +319,7 @@ function Notes() {
                         <h1>All Notes</h1>
                         <div className="pesquisa">
                             <img src={Search} alt="" srcset="" />
-                            <input className="input" type="Search" placeholder="Search by tIthe,content or tags..." />
+                            <input className="input" type="Search" placeholder="Search by tithe,content or tags..." />
                             <img src={Engrenage} alt="" srcset="" />
                             <img src={Topba} alt="" srcset="" />
                         </div>
@@ -270,7 +335,7 @@ function Notes() {
                             </div>
 
                             {notes.map(note => (
-                                <div className="botao">
+                                <div className="botao" key={note.id}>
                                     <button className="botoes" onClick={() => clickNote(note)}>
                                         <img src={Rectangle3} />
                                     </button>
@@ -278,8 +343,8 @@ function Notes() {
                                     <div>
                                         <h1>{note.title}</h1>
                                         <div className="controle-tag">
-                                            {note.tags?.map(tag => (
-                                                <p className='botoes'>{tag}</p>
+                                            {note.tags?.map((tag, index) => (
+                                                <p className='botoes' key={index}>{tag}</p>
                                             ))}
 
                                         </div>
@@ -295,7 +360,12 @@ function Notes() {
 
                         <div className="direita-meio">
 
-                            <div className="imagem-central"> </div>
+                            <label className="imagem-central"
+                            style={{ backgroundImage: `url('${imageURL || 'assets/sample.png'}')` }}>
+                                
+                                <input onChange={event => aoAdicionarImagem(event)}type="file"  className="file_input"/>
+                                
+                                 </label>
 
 
                             <div className="textoImage">
@@ -306,7 +376,19 @@ function Notes() {
                                     <div className="tag-meio">
                                         <img src={tag3} alt="" srcset="" />
                                         <p>Tags</p>
-                                        <input className="texto-editavel" value={noteSelecionado?.tags} onChange={event => setNoteSelecionado({ ...noteSelecionado, tags: event.target.value })} maxlength="20" placeholder="Insert the Tag name" type="Search" />
+                                        <input
+                                            className="texto-editavel"
+                                            value={noteSelecionado?.tags?.join(", ") || ""}
+                                            onChange={event =>
+                                                setNoteSelecionado({
+                                                    ...noteSelecionado,
+                                                    tags: event.target.value.split(",").map(tag => tag.trim())
+                                                })
+                                            }
+                                            maxLength="50"
+                                            placeholder="Insert tags separated by commas"
+                                            type="search"
+                                        />
 
                                     </div>
                                 </div>
@@ -314,7 +396,7 @@ function Notes() {
                                 <div className="controle-tag">
 
                                     <div className="tag-meio">
-                                        <img src={Clock} alt="" srcset="" />
+                                        <img src={Clock} alt="" />
                                         <p>Last Edited</p>
                                         <input className="texto-editavel" value={noteSelecionado?.date} onChange={event => setNoteSelecionado({ ...noteSelecionado, date: event.target.value })} maxlength="20" placeholder="Insert the Tag name" type="Search" />
 
@@ -366,7 +448,7 @@ function Notes() {
                                     <img src={Archive1} alt="" srcset="" />
                                     Archived Notes</button>
 
-                                <button className="delete-notes" type="button">
+                                <button  onClick={deletarNote} className="delete-notes" type="button">
                                     <img src={Delete} alt="" srcset="" />
                                     Delete Notes</button>
 
@@ -378,7 +460,7 @@ function Notes() {
 
 
                         </div>
-                    </div>
+                    </div>  
 
                 </main >
 

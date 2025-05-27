@@ -28,6 +28,11 @@
       "id": "1a78",
       "email": "rsianga@email.com",
       "senha": "12345"
+    },
+    {
+      "id": "9ea3",
+      "email": "teste@teste.com",
+      "password": "teste"
     }
   ],
   "tags": [
@@ -55,27 +60,13 @@
   "notes": [
     {
       "id": "9999",
+      "title": "Diego",
+      "description": "Texto..2",
       "userId": "1",
-      "title": "React Development",
-      "description": "Texto.",
-      "image": "assets/sample.png",
       "tags": [
-        "React",
-        "Node"
+        "East"
       ],
-      "date": "2025-05-19T19:53:40.182Z"
-    },
-    {
-      "id": "d7b9",
-      "userId": "1",
-      "title": "Node Development",
-      "description": "Texto 2.",
-      "image": "assets/sample.png",
-      "tags": [
-        "Node",
-        "    Teste"
-      ],
-      "date": "2025-05-19T18:44:08.198Z"
+      "date": "2025-05-26T22:47:35.269Z"
     },
     {
       "id": "af12",
@@ -89,21 +80,8 @@
       "date": "2025-05-19T16:57:26.196Z"
     },
     {
-      "id": "88e9",
-      "title": "ROSAA",
-      "description": "fadsfadsfadfas",
-      "userId": "meuId",
-      "tags": "fdasfasdf"
-    },
-    {
       "id": "5d7b0563-05d9-4079-9dbb-127c76f25e9c",
       "title": "teste",
-      "userId": null
-    },
-    {
-      "id": "1c6f9ea6-7cbf-4ec6-8da2-93313b32aab3",
-      "title": "CHURRASCO",
-      "description": "CHURRASCO SEXTA",
       "userId": null
     },
     {
