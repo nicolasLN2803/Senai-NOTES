@@ -104,7 +104,7 @@ function ResetarSenha() {
                             <input className="inpt" value={password} onChange={event => setPassword(event.target.value)}  type="password" placeholder="" />
                             
 
-                            <p className="textPassword">Confirm New Password</p>
+                            <p className="textPasswordd">Confirm New Password</p>
                             <input className="inpt"  value={newPassword} onChange={event => setNewPassword(event.target.value)} type="new-password" placeholder="" />
 
                             
