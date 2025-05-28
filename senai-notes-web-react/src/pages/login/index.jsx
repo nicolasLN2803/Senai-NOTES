@@ -5,10 +5,7 @@ import { useState } from "react";
 
 function Login() {
 
-
-
-
-  
+ 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -27,15 +24,14 @@ function Login() {
       return;
 
     }
-
-     let response = await fetch("http://localhost:3000/", {  
+// debugger;
+     let response = await fetch("https://apisenainotesstack-02.azurewebsites.net/api/Usuario/login", {  
 
       headers: {
         "Content-Type": "application/json"
       },
       method: "POST",
       body: JSON.stringify({
-
 
         email: email,
         password: password
@@ -45,19 +41,19 @@ function Login() {
 
     console.log(response);
 
-    if(email == "teste@teste.com" && password == "teste"){
+    // // if(email == "teste@teste.com" && password == "teste"){
 
-        let token = "meutoken";
-        let userId = "meuId";
+    //     let token = "meutoken";
+    //     let userId = "meuId";
 
-        localStorage.setItem("meuToken", token)
-        localStorage.setItem("meuId", userId)
+    //     localStorage.setItem("meuToken", token)
+    //     localStorage.setItem("meuId", userId)
 
-        alert("Login successfully completed!");
+    //     alert("Login successfully completed!");
       
-         window.location.href = "/senai-notes"
+    //      window.location.href = "/senai-notes"
       
-      }
+    //   }
 
     if (response.ok == true) {
 
@@ -66,14 +62,15 @@ function Login() {
 
       let json = await response.json();
 
-      let token = json.accessToken;
-      let userId = json.user.id;
+      // let token = json.accessToken;
+      // let userId = json.user.id;
+      
 
-      console.log("Token: " + token);
+      console.log("Token: " + json.token);
 
       // LOCAL STORAGE
-      localStorage.setItem("meuToken", token);
-      localStorage.setItem("meuId", userId);
+      localStorage.setItem("Token", json.token);
+      localStorage.setItem("usuario", json.usuario);
 
       window.location.href = "/senai-notes"
 

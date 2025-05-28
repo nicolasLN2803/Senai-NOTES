@@ -148,7 +148,7 @@ font-weight: bold;
 
     border: none;
     background-color: #335CFF;
-    width: 430px;
+    width: 300px;
     height: 41px;
     border-radius: 10px;
     margin-top: 10px;
@@ -156,6 +156,8 @@ font-weight: bold;
     color: white;
     cursor: pointer;
     transition: all ease 0.5s;
+    margin-left: 20px;
+    
 
 }
 

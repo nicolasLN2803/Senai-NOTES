@@ -114,6 +114,7 @@ function Notes() {
             title: novoTitulo,
             id: crypto.randomUUID(),
             userId: userId,
+            description: "Digite o texto",
             messages: []
 
         }
@@ -418,12 +419,6 @@ function Notes() {
                                 ></textarea>
 
                             </div>
-
-
-
-
-
-
 
                             <div className="controle-botao">
 
